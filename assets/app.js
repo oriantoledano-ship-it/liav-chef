@@ -134,6 +134,7 @@
   function initLenis() {
     if (reduceMotion || !window.Lenis) return;
     lenis = new Lenis({ duration: 1.1, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    window.lenis = lenis;
     if (hasGSAP) {
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
@@ -185,21 +186,48 @@
       });
     });
 
-    // gallery horizontal pin (desktop only)
-    var track = document.querySelector('[data-gallery-track]');
-    var pin = document.querySelector('[data-gallery-pin]');
-    if (track && pin && window.matchMedia('(min-width: 901px)').matches) {
-      var getDist = function () { return Math.max(0, track.scrollWidth - window.innerWidth + 80); };
-      gsap.to(track, {
-        x: function () { return getDist(); },
-        ease: 'none',
-        scrollTrigger: {
-          trigger: pin, pin: true, scrub: 1,
-          start: 'top top',
-          end: function () { return '+=' + getDist(); },
-          invalidateOnRefresh: true
-        }
+    // gallery cards rise in as the rail scrolls into view
+    gsap.utils.toArray('.gcard').forEach(function (card, i) {
+      gsap.fromTo(card, { y: 46, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 0.9, ease: 'expo.out', delay: (i % 3) * 0.08,
+        scrollTrigger: { trigger: '#gallery', start: 'top 78%' }
       });
+    });
+  }
+
+  /* =====================================================================
+     4b. Gallery rail — wheel-to-horizontal + drag-to-scroll (desktop).
+         Touch devices use native swipe; no JS needed there.
+     ===================================================================== */
+  function initGalleryRail() {
+    var vp = document.querySelector('[data-gallery-viewport]');
+    if (!vp) return;
+    if (window.matchMedia('(pointer: fine)').matches) {
+      // vertical wheel over the rail nudges it sideways, then hands back to page
+      vp.addEventListener('wheel', function (e) {
+        var dom = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+        var atStart = vp.scrollLeft <= 0;
+        var atEnd = vp.scrollLeft >= vp.scrollWidth - vp.clientWidth - 1;
+        // RTL: scrollLeft is <= 0; the far end is a large negative number
+        if ((dom < 0 && atStart) || (dom > 0 && atEnd)) return; // let the page scroll
+        e.preventDefault();
+        vp.scrollLeft += dom;
+      }, { passive: false });
+
+      // click-drag to pan
+      var down = false, sx = 0, sl = 0, moved = false;
+      vp.addEventListener('pointerdown', function (e) {
+        down = true; moved = false; sx = e.clientX; sl = vp.scrollLeft; vp.classList.add('is-dragging');
+      });
+      window.addEventListener('pointermove', function (e) {
+        if (!down) return;
+        var dx = e.clientX - sx;
+        if (Math.abs(dx) > 4) moved = true;
+        vp.scrollLeft = sl - dx;
+      });
+      window.addEventListener('pointerup', function () { down = false; vp.classList.remove('is-dragging'); });
+      // swallow the click that ends a drag so cards don't open Instagram mid-pan
+      vp.addEventListener('click', function (e) { if (moved) { e.preventDefault(); } }, true);
     }
   }
 
@@ -387,6 +415,7 @@
     initLenis();
     initMarquee();
     initScroll();
+    initGalleryRail();
     initCursor();
     initMagnetic();
     initNav();
