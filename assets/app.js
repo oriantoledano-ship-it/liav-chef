@@ -156,7 +156,6 @@
     }
     if (reduceMotion) {
       gsap.set('.will-rise, .will-fade', { opacity: 1, y: 0, clearProps: 'transform' });
-      var pl = document.querySelector('[data-process-line]'); if (pl) pl.style.transform = 'scaleX(1)';
       return;
     }
 
@@ -179,14 +178,13 @@
       });
     });
 
-    // process connector line draw
-    var line = document.querySelector('[data-process-line]');
-    if (line) {
-      gsap.to(line, {
-        scaleX: 1, ease: 'none',
-        scrollTrigger: { trigger: '#process', start: 'top 65%', end: 'center center', scrub: 0.6 }
+    // process chapters — giant ghost numbers drift on scroll
+    gsap.utils.toArray('[data-ch-idx]').forEach(function (idx) {
+      gsap.fromTo(idx, { xPercent: 8 }, {
+        xPercent: -8, ease: 'none',
+        scrollTrigger: { trigger: idx.closest('.chapter'), start: 'top bottom', end: 'bottom top', scrub: true }
       });
-    }
+    });
 
     // gallery horizontal pin (desktop only)
     var track = document.querySelector('[data-gallery-track]');
