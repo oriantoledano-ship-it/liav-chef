@@ -1,0 +1,12 @@
+# Normalize line endings so Windows uploads don't corrupt text files on Linux hosts (GitHub Pages)
+* text=auto eol=lf
+
+# Binary files — never touch encoding
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary

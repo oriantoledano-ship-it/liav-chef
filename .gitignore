@@ -1,0 +1,21 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code internals — do NOT upload to the repo
+.claude/
+.aider*
+CLAUDE.md
+
+# Local server logs / caches
+*.log
+node_modules/
+.cache/
+
+# Downloaded photo bundle (source only — the extracted images live under assets/real/)
+liav_photos.zip
