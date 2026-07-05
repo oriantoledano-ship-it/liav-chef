@@ -308,7 +308,15 @@ h1{ font-weight: 700; }
 
 /* ================= MARQUEE ================= */
 .marquee{ background: var(--ember); color: var(--espresso); padding: 20px 0; overflow: hidden; position: relative; z-index: 4; }
-.marquee__track{ display: flex; align-items: center; gap: 42px; width: max-content; white-space: nowrap; font-family: var(--f-display); font-weight: 500; font-size: clamp(20px,2.4vw,30px); will-change: transform; }
+.marquee__track{
+  display: flex; align-items: center; gap: 42px; width: max-content; white-space: nowrap;
+  font-family: var(--f-display); font-weight: 500; font-size: clamp(20px,2.4vw,30px);
+  will-change: transform;
+  /* CSS-driven infinite loop — does not depend on JS/GSAP timing to start or keep running */
+  animation: marquee-loop 26s linear infinite;
+}
+.marquee:hover .marquee__track{ animation-play-state: paused; }
+@keyframes marquee-loop{ to{ transform: translateX(-50%); } }
 .marquee__item{ display: inline-flex; align-items: center; gap: 42px; }
 .marquee__item::after{ content:""; width: 8px; height: 8px; background: var(--espresso); border-radius: 50%; transform: rotate(45deg); flex-shrink: 0; }
 
@@ -412,7 +420,11 @@ html.no-js .fx3d__cap{ opacity: 1; }
 
 /* ================= GALLERY (horizontal pan) ================= */
 .gallery{ background: var(--espresso); overflow: hidden; }
-.gallery__head{ padding: clamp(80px,10vw,130px) 0 40px; }
+/* No .shell wrapper here on purpose — this heading must run exactly as
+   wide as .gallery__track below it (edge-to-edge, gutter-only), not be
+   boxed into the 1280px .shell while the images beneath run wider. */
+.gallery__head{ padding: clamp(80px,10vw,130px) var(--gutter) 40px; }
+.gallery__head .sec-head{ max-width: var(--wide); margin: 0 auto; }
 .gallery__pin{ height: 100svh; display: flex; align-items: center; overflow: hidden; }
 .gallery__track{ display: flex; gap: 26px; padding: 0 var(--gutter); will-change: transform; }
 .gcard{ position: relative; flex: 0 0 auto; width: min(42vw, 480px); height: 66vh; border-radius: 4px; overflow: hidden; background: var(--espresso-3); }
@@ -564,6 +576,14 @@ html.no-js .will-clip{ clip-path: none; }
 /* ================= Mobile-first refinements ================= */
 @media (max-width: 640px){
   :root{ --gutter: 20px; }
+  /* Tight negative tracking reads as bold editorial at 100px+ display sizes,
+     but at mobile scale the same tracking crushes Frank Ruhl Libre's serifs
+     into each other — the exact thing that reads as "cheap/AI template".
+     Loosen tracking and lift line-height back up whenever the type is small. */
+  h1, h2, .display, .h2, .hero__title{ letter-spacing: -0.015em; }
+  .hero__title{ line-height: 1.02; }
+  .h2{ line-height: 1.06; }
+  .chapter__t{ letter-spacing: -0.01em; }
   .sec{ padding: 74px 0; }
   .sec-head{ margin-bottom: 42px; gap: 18px; }
   .hero{ padding: 116px 0 70px; min-height: 0; }
@@ -584,7 +604,7 @@ html.no-js .will-clip{ clip-path: none; }
   .review__body{ font-size: 18px; }
   .svc{ padding: 26px 0; }
   .svc__go{ width: 48px; height: 48px; }
-  .gallery__head{ padding: 66px 0 30px; }
+  .gallery__head{ padding: 66px var(--gutter) 30px; }
 }
 @media (max-width: 380px){
   .hero__title{ font-size: 44px; }

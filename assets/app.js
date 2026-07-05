@@ -19,7 +19,6 @@
   var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches || a11yState.motion === 'off';
 
   var lenis = null;
-  var marqueeTween = null;
 
   /* =====================================================================
      1. LOADER  →  then reveal hero
@@ -205,14 +204,15 @@
   }
 
   /* =====================================================================
-     5. Marquee (seamless via duplicate + xPercent)
+     5. Marquee — duplicate items once; the loop itself runs on a plain
+        CSS @keyframes animation (assets/styles.css) so it never depends
+        on GSAP/JS load timing to start or to keep looping.
      ===================================================================== */
   function initMarquee() {
     var mq = document.querySelector('[data-marquee]');
     if (!mq) return;
     mq.innerHTML = mq.innerHTML + mq.innerHTML;
-    if (reduceMotion || !hasGSAP) return;
-    marqueeTween = gsap.to(mq, { xPercent: -50, duration: 28, ease: 'none', repeat: -1 });
+    if (reduceMotion) mq.style.animation = 'none';
   }
 
   /* =====================================================================
@@ -364,8 +364,8 @@
         try { localStorage.setItem(A11Y_KEY, JSON.stringify(a11yState)); } catch (e) {}
         apply(a11yState);
         if (chip.dataset.key === 'motion') {
-          if (chip.dataset.val === 'off') { marqueeTween && marqueeTween.pause(); }
-          else { marqueeTween && marqueeTween.play(); }
+          var mq = document.querySelector('[data-marquee]');
+          if (mq) mq.style.animation = (chip.dataset.val === 'off') ? 'none' : '';
         }
       });
     });
@@ -373,7 +373,9 @@
     if (reset) reset.addEventListener('click', function () {
       a11yState = {};
       try { localStorage.setItem(A11Y_KEY, '{}'); } catch (e) {}
-      apply(a11yState); marqueeTween && marqueeTween.play();
+      apply(a11yState);
+      var mq = document.querySelector('[data-marquee]');
+      if (mq) mq.style.animation = '';
     });
   }
 
