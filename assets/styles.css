@@ -319,7 +319,7 @@ h1{ font-weight: 700; }
   animation: marquee-loop 26s linear infinite;
 }
 .marquee:hover .marquee__track{ animation-play-state: paused; }
-@keyframes marquee-loop{ to{ transform: translateX(-50%); } }
+@keyframes marquee-loop{ to{ transform: translateX(calc(-1 * var(--marq-dist, 50%))); } }
 .marquee__item{ display: inline-flex; align-items: center; gap: 42px; }
 .marquee__item::after{ content:""; width: 8px; height: 8px; background: var(--espresso); border-radius: 50%; transform: rotate(45deg); flex-shrink: 0; }
 

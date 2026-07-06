@@ -87,70 +87,13 @@
   }
 
   /* ---------------------------------------------------------------
-     4. Masked word-reveal on every section H2 (scroll-triggered)
+     4. Section headings + card groups.
+     Word-split reveals here fought the fx3d section's pinned
+     ScrollTrigger (positions shifted underneath them) and left headings
+     stranded off-screen ("looked deleted"). app.js already reveals every
+     .will-rise via a rock-solid ScrollTrigger.batch — we leave that in
+     charge and don't touch these elements, so nothing double-animates.
      --------------------------------------------------------------- */
-  function splitH2(h2) {
-    if (h2.dataset.split) return;
-    h2.dataset.split = '1';
-    var nodes = Array.prototype.slice.call(h2.childNodes);
-    h2.innerHTML = '';
-    nodes.forEach(function (node) {
-      if (node.nodeType === 3) {                       // text → words
-        node.textContent.split(/(\s+)/).forEach(function (tok) {
-          if (tok.trim() === '') { h2.appendChild(document.createTextNode(tok)); return; }
-          var w = document.createElement('span'); w.className = 'wrev';
-          var inner = document.createElement('i'); inner.textContent = tok;
-          w.appendChild(inner); h2.appendChild(w);
-        });
-      } else if (node.nodeName === 'BR') {
-        h2.appendChild(document.createElement('br'));
-      } else {                                          // keep spans/accents, wrap as one unit
-        var w2 = document.createElement('span'); w2.className = 'wrev';
-        var inner2 = document.createElement('i'); inner2.appendChild(node);
-        w2.appendChild(inner2); h2.appendChild(w2);
-      }
-    });
-    // hand full control of this heading to the word-reveal; stop app.js's
-    // batch from double-animating it as a plain .will-rise block.
-    h2.classList.remove('will-rise');
-    if (window.gsap) gsap.set(h2, { opacity: 1, clearProps: 'transform' });
-    return h2.querySelectorAll('.wrev > i');
-  }
-
-  if (hasGSAP && !reduce) {
-    document.querySelectorAll('.sec-head .h2, .fx3d__head .h2, .cta .h2, .about__body .h2').forEach(function (h2) {
-      var inners = splitH2(h2);
-      if (!inners || !inners.length) return;
-      gsap.set(inners, { yPercent: 108 });
-      gsap.to(inners, {
-        yPercent: 0, duration: 1.0, ease: 'expo.out', stagger: 0.06,
-        scrollTrigger: { trigger: h2, start: 'top 88%' }
-      });
-    });
-
-    /* ---------------------------------------------------------------
-       5. Stronger staggered entrances for card groups
-       --------------------------------------------------------------- */
-    var groups = [
-      { sel: '.svc-list .svc', from: { y: 40, opacity: 0, filter: 'blur(6px)' } },
-      { sel: '.reviews__grid .review', from: { y: 50, opacity: 0, scale: 0.96 } },
-      { sel: '.chapters .chapter', from: { y: 42, opacity: 0 } }
-    ];
-    groups.forEach(function (g) {
-      var els = gsap.utils.toArray(g.sel);
-      if (!els.length) return;
-      gsap.set(els, g.from);
-      ScrollTrigger.create({
-        trigger: els[0], start: 'top 86%',
-        onEnter: function () {
-          gsap.to(els, {
-            y: 0, opacity: 1, scale: 1, filter: 'blur(0px)',
-            duration: 1.0, ease: 'expo.out', stagger: 0.1, overwrite: true
-          });
-        }
-      });
-    });
-  }
 
   /* ---------------------------------------------------------------
      6. Scroll progress bar (thin gradient line, top of viewport)
@@ -165,5 +108,21 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+  }
+
+  /* ---------------------------------------------------------------
+     7. Mobile sticky CTA — slide up once the hero is scrolled past.
+        CSS hides it on desktop; the class toggle is a no-op there.
+     --------------------------------------------------------------- */
+  var mcta = document.querySelector('[data-mobile-cta]');
+  var heroSec = document.querySelector('.hero');
+  if (mcta && heroSec) {
+    var mctaScroll = function () {
+      var past = window.scrollY > heroSec.offsetHeight * 0.72;
+      mcta.classList.toggle('is-shown', past);
+      document.body.classList.toggle('mcta-on', past);
+    };
+    window.addEventListener('scroll', mctaScroll, { passive: true });
+    mctaScroll();
   }
 })();

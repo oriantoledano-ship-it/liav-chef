@@ -239,7 +239,13 @@
   function initMarquee() {
     var mq = document.querySelector('[data-marquee]');
     if (!mq) return;
+    // Measure ONE set first, then duplicate. The CSS keyframe scrolls by
+    // exactly (one set width + one gap) so the loop is pixel-seamless —
+    // translateX(-50%) was off by half a gap each cycle (the "vanishing").
+    var single = mq.scrollWidth;
+    var gap = parseFloat(getComputedStyle(mq).columnGap) || 0;
     mq.innerHTML = mq.innerHTML + mq.innerHTML;
+    mq.style.setProperty('--marq-dist', (single + gap) + 'px');
     if (reduceMotion) mq.style.animation = 'none';
   }
 
