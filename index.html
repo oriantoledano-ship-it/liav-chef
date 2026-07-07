@@ -27,6 +27,8 @@
 
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="stylesheet" href="assets/enhance.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/makeover.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2317110C'/%3E%3Ctext x='50' y='70' font-family='Georgia' font-size='62' fill='%23C55A2B' text-anchor='middle'%3Eל%3C/text%3E%3C/svg%3E" />
 
   <noscript><style>
@@ -165,7 +167,9 @@
           <p class="big will-rise">החלטתי להביא את המסעדה אליכם הביתה — עם קפדנות של שף, גישה של חבר שבא לבשל, וסבלנות למחוות הקטנות שעושות את ההבדל.</p>
           <p class="will-rise">המטבח הוא המקום הכי כן בבית. שם אין מסכות — רק אש, סכין ומרכיבים שלא יודעים לשקר. אני מגיע עם הכלים, המרכיבים והחוויה, ומשאיר אחריי שולחן מסודר וזיכרון של ארוחה שלא תשכחו.</p>
           <p class="will-rise">כל תפריט נכתב בהתאמה אישית: קורא לאורחים, מקשיב לטעמים, מבין את הרגע. בין אם זו ארוחה אינטימית לשניים או וילה מלאה בחברים — הפרטים הקטנים הם המקצוע שלי.</p>
-          <div class="about__sign will-rise"><b>ליאב שמעונוב</b><div><span>שף פרטי · מטבח עונתי</span></div></div>
+          <div class="about__sign will-rise"><b>ליאב שמעונוב</b><div><span>שף פרטי · מטבח עונתי</span></div>
+            <svg class="about__flourish" viewBox="0 0 224 46" aria-hidden="true"><path d="M6 30C24 8 52 6 70 24c8 8 2 20-8 16-9-4-6-18 6-22 16-5 30 8 44 12 18 5 30-14 50-10 15 3 20 16 38 8 6-3 12-9 16-14"/></svg>
+          </div>
         </div>
       </div>
     </section>
@@ -243,15 +247,20 @@
           <p class="sec-head__lede will-rise">מבחר מהאירועים והארוחות של השנה האחרונה. גללו הצידה — כל תמונה, שולחן אחד, ערב אחד שקרה.</p>
         </div>
       </div>
-      <div class="gallery__viewport" data-gallery-viewport>
-        <div class="gallery__track">
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_5.jpg" alt="טרטר טונה בליווי רוטב הדרים חריף" loading="lazy" /><span class="gcard__cap"><small>מנה חתומה</small><b>טרטר טונה בהדרים</b></span></a>
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_1.jpg" alt="כריך שניצל דגים ביתי בלחמנייה" loading="lazy" /><span class="gcard__cap"><small>מהאירועים</small><b>כריך שניצל דגים</b></span></a>
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_9.jpg" alt="מנת פתיחה עם תירס וצ׳ילי ברוטב חמאתי" loading="lazy" /><span class="gcard__cap"><small>מנת פתיחה</small><b>סביצ׳ה תירס וצ׳ילי</b></span></a>
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_6.jpg" alt="קרפצ׳יו טונה עם ענבים וירקות בקערה" loading="lazy" /><span class="gcard__cap"><small>מנה קרה</small><b>קרפצ׳יו טונה</b></span></a>
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_2.jpg" alt="ליאב מסדר ומתבל פרוסות סלמון על הצלחת" loading="lazy" /><span class="gcard__cap"><small>בעבודה</small><b>סידור סלמון</b></span></a>
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_7.jpg" alt="הכנת טרטר דגים טרי לפני ההגשה" loading="lazy" /><span class="gcard__cap"><small>מאחורי הקלעים</small><b>הכנת הטרטר</b></span></a>
-          <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_4.jpg" alt="מבט קרוב על טרטר טונה בהגשה אלגנטית" loading="lazy" /><span class="gcard__cap"><small>מבט מקרוב</small><b>אותה מנה, זווית אחרת</b></span></a>
+      <div class="swiper gallery-swiper" data-gallery-swiper>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_5.jpg" alt="טרטר טונה בליווי רוטב הדרים חריף" loading="lazy" /><span class="gcard__cap"><small>מנה חתומה</small><b>טרטר טונה בהדרים</b></span></a></div>
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_1.jpg" alt="כריך שניצל דגים ביתי בלחמנייה" loading="lazy" /><span class="gcard__cap"><small>מהאירועים</small><b>כריך שניצל דגים</b></span></a></div>
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_9.jpg" alt="מנת פתיחה עם תירס וצ׳ילי ברוטב חמאתי" loading="lazy" /><span class="gcard__cap"><small>מנת פתיחה</small><b>סביצ׳ה תירס וצ׳ילי</b></span></a></div>
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_6.jpg" alt="קרפצ׳יו טונה עם ענבים וירקות בקערה" loading="lazy" /><span class="gcard__cap"><small>מנה קרה</small><b>קרפצ׳יו טונה</b></span></a></div>
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_2.jpg" alt="ליאב מסדר ומתבל פרוסות סלמון על הצלחת" loading="lazy" /><span class="gcard__cap"><small>בעבודה</small><b>סידור סלמון</b></span></a></div>
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_7.jpg" alt="הכנת טרטר דגים טרי לפני ההגשה" loading="lazy" /><span class="gcard__cap"><small>מאחורי הקלעים</small><b>הכנת הטרטר</b></span></a></div>
+          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_4.jpg" alt="מבט קרוב על טרטר טונה בהגשה אלגנטית" loading="lazy" /><span class="gcard__cap"><small>מבט מקרוב</small><b>אותה מנה, זווית אחרת</b></span></a></div>
+        </div>
+        <div class="gallery-swiper__nav">
+          <button class="gnav gnav--prev" aria-label="הקודם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <div class="gallery-swiper__count"><span data-swiper-current>1</span> / <span data-swiper-total>7</span></div>
+          <button class="gnav gnav--next" aria-label="הבא"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
         </div>
       </div>
       <div class="shell gallery__foot">
@@ -418,10 +427,14 @@
 
   <script src="assets/vendor/gsap.min.js"></script>
   <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/SplitText.min.js"></script>
+  <script src="assets/vendor/DrawSVGPlugin.min.js"></script>
   <script src="assets/vendor/lenis.min.js"></script>
   <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/swiper-bundle.min.js"></script>
   <script src="assets/app.js"></script>
   <script src="assets/fx3d.js"></script>
   <script src="assets/enhance.js"></script>
+  <script src="assets/makeover.js"></script>
 </body>
 </html>
