@@ -100,4 +100,48 @@
     var sig2 = document.querySelector('.about__flourish path');
     if (sig2) sig2.style.strokeDashoffset = '0';
   }
+
+  /* -----------------------------------------------------------------
+     4. COOK — image-sequence scrollytelling.
+        Desktop: sticky stage, GSAP scrub swaps the active frame + HUD.
+        Mobile: CSS shows every frame as a stacked row (no JS needed).
+     ----------------------------------------------------------------- */
+  var cook = document.querySelector('[data-cook]');
+  if (cook) {
+    var frames = cook.querySelectorAll('.cook__frame');
+    var cookImgs = cook.querySelectorAll('.cook__frame img');
+    var curEl = document.querySelector('[data-cook-cur]');
+    var barEl = document.querySelector('[data-cook-bar]');
+
+    // preload the sequence once the section approaches (images are ~100KB each)
+    var preloaded = false;
+    var preload = function () {
+      if (preloaded) return; preloaded = true;
+      cookImgs.forEach(function (im) { var g = new Image(); g.src = im.currentSrc || im.src; });
+    };
+    if (hasGSAP) {
+      ScrollTrigger.create({ trigger: cook, start: 'top 160%', once: true, onEnter: preload });
+    } else { preload(); }
+
+    if (hasGSAP && window.matchMedia('(min-width: 901px)').matches && !reduce) {
+      var lastI = -1;
+      var setActive = function (i) {
+        if (i === lastI) return; lastI = i;
+        frames.forEach(function (f, idx) { f.classList.toggle('is-on', idx === i); });
+        if (curEl) curEl.textContent = ('0' + (i + 1)).slice(-2);
+      };
+      ScrollTrigger.create({
+        trigger: cook,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        onUpdate: function (self) {
+          var i = Math.min(frames.length - 1, Math.floor(self.progress * frames.length));
+          setActive(i);
+          if (barEl) barEl.style.transform = 'scaleX(' + self.progress.toFixed(3) + ')';
+        }
+      });
+      ScrollTrigger.refresh();
+    }
+  }
 })();

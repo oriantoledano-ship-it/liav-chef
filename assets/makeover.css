@@ -70,6 +70,77 @@
 .about__flourish path{ fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
 /* =====================================================================
+   3b. COOK — image-sequence scrollytelling
+   Mobile-first: stacked rows with snap. Desktop: sticky crossfade.
+   ===================================================================== */
+.cook{ background: var(--espresso); position: relative; }
+.cook__head{ padding: clamp(80px,10vw,130px) var(--gutter) 20px; }
+
+/* ---- MOBILE (default): rows, each frame full-width with caption ---- */
+.cook__frame{
+  position: relative;
+  border-radius: 5px; overflow: hidden;
+  margin: 0 var(--gutter) 16px;
+  background: var(--espresso-3);
+  box-shadow: 0 24px 60px oklch(0 0 0 /.5);
+}
+.cook__frame img{ width: 100%; height: auto; display: block; aspect-ratio: 4/5; object-fit: cover; }
+.cook__cap{
+  position: absolute; right: 0; left: 0; bottom: 0; z-index: 2;
+  padding: 60px 26px 24px; color: var(--ink);
+  background: linear-gradient(0deg, oklch(0.14 0.02 50 /.92), oklch(0.14 0.02 50 /.55) 55%, transparent);
+}
+.cook__step{
+  display: inline-block; font-family: var(--f-display); font-weight: 700;
+  font-size: 15px; color: var(--ember); margin-bottom: 8px;
+  letter-spacing: .04em;
+}
+.cook__cap h3{ font-family: var(--f-display); font-weight: 700; font-size: clamp(22px,2.4vw,30px); color: var(--ink); margin: 0 0 8px; }
+.cook__cap p{ color: var(--ink-soft); font-size: 15px; line-height: 1.6; margin: 0; max-width: 46ch; }
+.cook__seq{ padding-bottom: 30px; }
+.cook__hud{ display: none; }
+
+/* ---- DESKTOP (>=901px): pinned sticky crossfade sequence ---- */
+@media (min-width: 901px){
+  .cook__seq{ height: 720vh; padding: 0; }        /* tall scroll track */
+  .cook__sticky{
+    position: sticky; top: 0; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .cook__stage{
+    position: relative;
+    width: min(40vh, 46vw); aspect-ratio: 4/5; height: min(82vh, 780px);
+    border-radius: 6px; overflow: hidden;
+    box-shadow: 0 50px 120px oklch(0 0 0 /.7);
+  }
+  .cook__frame{
+    position: absolute; inset: 0; margin: 0; border-radius: 0;
+    opacity: 0; box-shadow: none;
+    transition: opacity .7s var(--ease), transform 1.2s var(--ease-out);
+    transform: scale(1.06);
+  }
+  .cook__frame img{ height: 100%; aspect-ratio: auto; }
+  .cook__frame.is-on{ opacity: 1; transform: scale(1); z-index: 1; }
+  .cook__cap{ padding: 90px 34px 34px; }
+  .cook__cap h3{ font-size: clamp(26px,2vw,36px); }
+  .cook__cap p{ font-size: 16px; }
+  /* HUD counter beside the stage */
+  .cook__hud{
+    display: flex; align-items: center; gap: 10px;
+    position: absolute; right: calc(50% + min(20vh,23vw) + 40px); bottom: 12vh;
+    font-family: var(--f-display); font-size: 22px; color: var(--ink-faint);
+  }
+  .cook__num{ font-size: clamp(48px,5vw,84px); font-weight: 700; color: var(--ember); line-height: 1; font-variant-numeric: tabular-nums; }
+  .cook__hud i{ font-style: normal; opacity: .5; }
+  .cook__bar{ position: absolute; right: 0; bottom: -18px; width: 100%; height: 2px; background: var(--char-line); overflow: hidden; }
+  .cook__bar span{ position: absolute; inset: 0; right: 0; background: var(--grad-hot); transform: scaleX(0); transform-origin: right; }
+}
+@media (prefers-reduced-motion: reduce){
+  .cook__frame{ transition: opacity .2s; transform: none !important; }
+}
+
+/* =====================================================================
    4. EDITORIAL POLISH
    ===================================================================== */
 /* oversized section headings breathe more */
