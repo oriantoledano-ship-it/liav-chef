@@ -320,7 +320,11 @@ h1{ font-weight: 700; }
   animation: marquee-loop 26s linear infinite;
 }
 .marquee:hover .marquee__track{ animation-play-state: paused; }
-@keyframes marquee-loop{ to{ transform: translateX(calc(-1 * var(--marq-dist, 50%))); } }
+/* RTL: track scrolls to the POSITIVE X (rightward) so the duplicated set —
+   which sits to the LEFT of the original in an RTL flex row — feeds into the
+   viewport from the right. A negative translate emptied the viewport (the
+   "vanishing"). Distance = exactly one set, so the loop is seamless. */
+@keyframes marquee-loop{ to{ transform: translateX(var(--marq-dist, 50%)); } }
 .marquee__item{ display: inline-flex; align-items: center; gap: 42px; }
 .marquee__item::after{ content:""; width: 8px; height: 8px; background: var(--espresso); border-radius: 50%; transform: rotate(45deg); flex-shrink: 0; }
 
