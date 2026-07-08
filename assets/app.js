@@ -239,14 +239,30 @@
   function initMarquee() {
     var mq = document.querySelector('[data-marquee]');
     if (!mq) return;
-    // Measure ONE set first, then duplicate. The CSS keyframe scrolls by
-    // exactly (one set width + one gap) so the loop is pixel-seamless —
-    // translateX(-50%) was off by half a gap each cycle (the "vanishing").
-    var single = mq.scrollWidth;
-    var gap = parseFloat(getComputedStyle(mq).columnGap) || 0;
-    mq.innerHTML = mq.innerHTML + mq.innerHTML;
-    mq.style.setProperty('--marq-dist', (single + gap) + 'px');
     if (reduceMotion) mq.style.animation = 'none';
+    // Build AFTER fonts load — measuring before the display font swaps in gives
+    // a too-small single-set width, so the -dist is short and the loop "jumps
+    // and vanishes". Duplicate the set, then scroll by exactly one set + one gap
+    // for a pixel-seamless loop.
+    var built = false;
+    var build = function () {
+      if (built) return; built = true;
+      var n = mq.children.length;                       // original item count
+      mq.innerHTML = mq.innerHTML + mq.innerHTML;        // duplicate the set
+      // getBoundingClientRect forces a synchronous reflow and returns sub-pixel
+      // values, so the loop distance is exact — offsetLeft rounded to integers
+      // and drifted ~2px, leaving a sliver gap each cycle (the "vanishing").
+      var kids = mq.children;
+      var a = kids[0].getBoundingClientRect().left;
+      var b = kids[n].getBoundingClientRect().left;
+      mq.style.setProperty('--marq-dist', Math.abs(b - a).toFixed(2) + 'px');
+    };
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(build);
+      setTimeout(build, 1200); // safety if fonts.ready never resolves
+    } else {
+      build();
+    }
   }
 
   /* =====================================================================

@@ -167,22 +167,23 @@
       scrollTrigger: {
         trigger: section,
         start: 'top top',
-        end: '+=135%',
+        end: '+=165%',
         pin: true,
         scrub: 1,
         invalidateOnRefresh: true
       }
     });
-    // shattered -> whole only. It STAYS whole once assembled (the pin releases
-    // with the dish complete). Because scrub is bound to scroll, scrolling back
-    // UP reverses the timeline and re-shatters it. Exactly the requested behavior.
-    tl.fromTo(uniforms.uProgress, { value: 1 }, { value: 0, duration: 1.0, ease: 'none' }, 0)
-      .fromTo(group.rotation, { y: 0.5, x: 0.14 }, { y: 0, x: 0, duration: 1.0, ease: 'none' }, 0);
+    // Assemble in the FIRST ~68% of the scroll, then HOLD the fully-formed dish
+    // for the remaining ~32% before the pin releases — so the user clearly sees
+    // it complete at the bottom. Scrolling back up reverses (re-shatters).
+    tl.fromTo(uniforms.uProgress, { value: 1 }, { value: 0, duration: 0.68, ease: 'power1.out' }, 0)
+      .fromTo(group.rotation, { y: 0.5, x: 0.14 }, { y: 0, x: 0, duration: 0.68, ease: 'power1.out' }, 0)
+      .to({}, { duration: 0.32 });   // hold assembled
 
-    // caption resolves into view as the dish completes, and stays
+    // caption resolves into view as the dish completes, and stays through the hold
     var cap = section.querySelector('[data-fx3d-cap]');
     if (cap) {
-      tl.fromTo(cap, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, 0.7);
+      tl.fromTo(cap, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 0.5);
     }
   }
 

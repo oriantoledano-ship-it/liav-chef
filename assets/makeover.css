@@ -156,3 +156,24 @@
 @media (prefers-reduced-motion: reduce){
   .gallery-swiper .gcard img{ transition: none; }
 }
+
+/* =====================================================================
+   5. Cook section — desktop only (client wants it off on phones)
+   ===================================================================== */
+@media (max-width: 900px){ .cook{ display: none; } }
+
+/* =====================================================================
+   6. Designer credit
+   ===================================================================== */
+.foot__credit{
+  text-align: center; margin-top: 24px; padding-top: 22px;
+  border-top: 1px solid var(--char-line);
+  font-size: 13.5px; color: var(--ink-faint);
+}
+.foot__credit a{
+  color: var(--ink-soft);
+  text-decoration: underline; text-underline-offset: 3px;
+  text-decoration-color: var(--ember);
+  transition: color .3s var(--ease);
+}
+.foot__credit a:hover{ color: var(--ember); }
