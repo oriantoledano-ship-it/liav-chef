@@ -24,7 +24,7 @@
   var allChars = [];
   if (hasGSAP && window.SplitText && !reduce) {
     document.querySelectorAll('.sec-head .h2').forEach(function (h2) {
-      var split = new SplitText(h2, { type: 'chars', charsClass: 'mk-char' });
+      var split = new SplitText(h2, { type: 'words,chars', charsClass: 'mk-char', wordsClass: 'mk-word' });
       h2.classList.remove('will-rise');
       h2.classList.add('mk-taken');
       gsap.set(split.chars, { yPercent: 55, opacity: 0 });

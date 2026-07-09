@@ -64,8 +64,8 @@ body::before{
   50%{ background-position: 100% 50%; }
 }
 @keyframes taste-glow{
-  0%, 100%{ filter: drop-shadow(0 0 6px oklch(0.66 0.18 42 /.4)) drop-shadow(0 0 2px oklch(0.80 0.10 78 /.3)); }
-  50%{ filter: drop-shadow(0 0 24px oklch(0.72 0.19 46 /.7)) drop-shadow(0 0 9px oklch(0.80 0.10 78 /.55)); }
+  0%, 100%{ filter: drop-shadow(0 0 3px oklch(0.66 0.18 42 /.5)) drop-shadow(0 0 6px oklch(0.72 0.19 46 /.35)); }
+  50%{ filter: drop-shadow(0 0 6px oklch(0.72 0.19 46 /.75)) drop-shadow(0 0 13px oklch(0.72 0.19 46 /.5)) drop-shadow(0 0 3px oklch(0.80 0.10 78 /.6)); }
 }
 .hero__title .accent::after{ opacity: .85; }
 @media (prefers-reduced-motion: reduce){

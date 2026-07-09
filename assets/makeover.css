@@ -56,6 +56,8 @@
    ===================================================================== */
 .mk-split .mk-line{ overflow: hidden; }
 .mk-char{ display: inline-block; will-change: transform, opacity; }
+/* keep each word's letters together so the last letter never wraps alone */
+.mk-word{ display: inline-block; white-space: nowrap; }
 /* headings we hand to SplitText should not also run the .will-rise batch */
 .h2.mk-taken{ opacity: 1 !important; transform: none !important; }
 
