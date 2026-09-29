@@ -2,41 +2,54 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="robots" content="index,follow" />
   <title>מדיניות פרטיות · ליאב שמעונוב שף פרטי</title>
   <meta name="description" content="מדיניות הפרטיות של אתר ליאב שמעונוב שף פרטי — איזה מידע נאסף, איך משתמשים בו והזכויות שלכם על פי דין." />
+  <link rel="canonical" href="https://oriantoledano-ship-it.github.io/liav-chef/privacy.html" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:title" content="מדיניות פרטיות · ליאב שמעונוב שף פרטי" />
+  <meta property="og:description" content="מדיניות הפרטיות של אתר ליאב שמעונוב שף פרטי — איזה מידע נאסף, איך משתמשים בו והזכויות שלכם על פי דין." />
+  <meta name="theme-color" content="#14100d" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=1" />
+  <script src="assets/boot.js?v=1"></script>
 </head>
 <body>
-  <a href="#main" class="skip">דילוג לתוכן</a>
-
-  <header class="nav" role="banner">
+  <a href="#main" class="skip">דילוג לתוכן המרכזי</a>
+  <header class="nav" id="nav">
     <div class="shell nav__row">
-      <a href="index.html" class="brand" aria-label="חזרה לעמוד הראשי">
-        <span>ליאב שמעונוב</span>
-        <span class="brand__mark">שף פרטי</span>
-      </a>
-      <a href="index.html#contact" class="nav__cta">חזרה לעמוד הראשי</a>
+      <a href="index.html" class="brand" aria-label="ליאב שמעונוב, שף פרטי — לעמוד הראשי"><b>ליאב שמעונוב</b><small>שף פרטי</small></a>
+      <nav class="nav__links" aria-label="ניווט ראשי">
+        <a href="index.html#gallery">הגלריה</a>
+        <a href="index.html#atmosphere">אווירה</a>
+        <a href="index.html#services">מה מזמינים</a>
+        <a href="journal.html">מאמרים</a>
+        <a href="index.html#contact">יצירת קשר</a>
+      </nav>
+      <a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer" class="btn btn--light nav__cta">להזמנת ערב</a>
+      <button class="burger" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
     </div>
   </header>
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <a href="index.html">עמוד הבית</a>
+    <a href="index.html#gallery">הגלריה</a>
+    <a href="index.html#services">מה מזמינים</a>
+    <a href="journal.html">מאמרים</a>
+    <a href="index.html#contact">יצירת קשר</a>
+    <div class="drawer__foot"><a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer">הודעה באינסטגרם</a><a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer">וואטסאפ</a></div>
+  </div>
 
-  <main id="main" class="legal">
-    <div class="shell legal__wrap">
-      <a href="index.html" class="back-home">
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 7h12M7 1 1 7l6 6"/></svg>
-        <span>חזרה לעמוד הראשי</span>
-      </a>
-
-      <span class="kicker">פרטיות</span>
-      <h1 style="margin-top:14px">מדיניות פרטיות</h1>
-      <div class="legal__meta">עודכן לאחרונה: יולי 2026 · חל על אתר liavshimonov.co.il</div>
+  <main id="main" class="page">
+    <div class="shell">
+      <a href="index.html" class="back"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg> לעמוד הבית</a>
+      <div class="prose legal">
+      <h1>מדיניות פרטיות</h1>
+      <div class="page__meta">עודכן לאחרונה: יולי 2026</div>
 
       <p>
         אני, <strong>ליאב שמעונוב</strong> (״השף״ או ״אני״), מכבד את פרטיות הגולשים באתר ואת פרטיות הלקוחות שיוצרים עמי קשר. מדיניות זו מפרטת איזה מידע נאסף באתר, לאילו מטרות משתמשים בו, ומהן זכויותיכם על פי דין הישראלי, לרבות <strong>חוק הגנת הפרטיות, התשמ״א־1981</strong> ותקנותיו.
@@ -46,7 +59,7 @@
       <ul>
         <li><strong>מידע שאתם מוסרים ביוזמתכם</strong> — שם, מספר טלפון, כתובת דוא״ל, תוכן ההודעה, פרטי אירוע ובקשות תפריט — כאשר אתם פונים בוואטסאפ, טלפון או במייל.</li>
         <li><strong>מידע טכני</strong> — סוג דפדפן, מערכת הפעלה, כתובת IP, וזמן הגלישה. מידע זה נאסף באופן אוטומטי ואינו מזוהה אישית.</li>
-        <li><strong>אחסון מקומי (localStorage)</strong> — האתר שומר בדפדפן שלכם בלבד את העדפות הנגישות שבחרתם (ניגודיות, גודל טקסט וכו׳). מידע זה נשאר במכשירכם ואינו נשלח לשרת.</li>
+        <li><strong>אחסון מקומי (localStorage)</strong> — האתר שומר בדפדפן שלכם בלבד את העדפות הנגישות שבחרתם (ניגודיות, גודל טקסט וכו׳), וכן סימון טכני שמונע הצגה חוזרת של מסך הפתיחה באותו ביקור. מידע זה נשאר במכשירכם ואינו נשלח לשרת.</li>
       </ul>
 
       <h2>2. למה משתמשים במידע</h2>
@@ -102,22 +115,42 @@
       <p>
         לשאלות בנושא פרטיות, בקשה למחיקה, או פנייה: <strong>ליאב שמעונוב</strong> · טלפון <a href="tel:+972542088166">054-208-8166</a> · אינסטגרם <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer">@liav_shimonov_</a>.
       </p>
+      </div>
     </div>
   </main>
 
-  <footer class="foot" role="contentinfo">
+  <footer class="foot">
     <div class="shell">
-      <div class="foot__bottom" style="border-top:0;padding-top:0">
-        <div>© <span data-year>2026</span> ליאב שמעונוב · כל הזכויות שמורות.</div>
-        <div>
-          <a href="privacy.html">פרטיות</a>
-          <a href="terms.html">תנאים</a>
-          <a href="accessibility.html">נגישות</a>
+      <div class="foot__top">
+        <div class="foot__brand"><b>ליאב שמעונוב</b><p>שף פרטי. ארוחות פרטיות בבית ואירועים.</p></div>
+        <div class="foot__cols">
+          <div><h4>באתר</h4><a href="index.html">עמוד הבית</a><a href="index.html#gallery">הגלריה</a><a href="index.html#services">מה מזמינים</a><a href="journal.html">מאמרים</a></div>
+          <div><h4>יצירת קשר</h4><a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer">אינסטגרם</a><a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer">וואטסאפ</a><a href="https://www.threads.com/@liav_shimonov_" target="_blank" rel="noopener noreferrer">Threads</a></div>
+          <div><h4>מידע</h4><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תנאי שימוש</a><a href="accessibility.html">הצהרת נגישות</a></div>
         </div>
+      </div>
+      <div class="foot__bottom">
+        <div>© <span data-year>2026</span> ליאב שמעונוב · כל הזכויות שמורות</div>
+        <div>צילום: <a href="https://www.instagram.com/shirancohenshay_photography/" target="_blank" rel="noopener noreferrer">שירן כהן שי</a></div>
+        <div class="foot__credit">עוצב ע״י <a href="https://wa.me/972525372958" target="_blank" rel="noopener noreferrer">Orian Digital</a></div>
       </div>
     </div>
   </footer>
 
-  <script src="assets/app.js"></script>
+  <button class="a11y-btn" aria-label="פתיחת אפשרויות נגישות" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="4.5" r="2.2" fill="currentColor" stroke="none"/><path d="M4 8h16M9.5 8v7l-1.5 5M14.5 8v7l1.5 5M8 13h8"/></svg>
+  </button>
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" aria-hidden="true">
+    <h4 id="a11y-title">נגישות</h4>
+    <div class="a11y-row"><span>ניגודיות גבוהה</span><div class="a11y-ctrls"><button class="a11y-chip" data-key="contrast" data-val="off" aria-pressed="true">כבוי</button><button class="a11y-chip" data-key="contrast" data-val="high" aria-pressed="false">גבוה</button></div></div>
+    <div class="a11y-row"><span>גודל טקסט</span><div class="a11y-ctrls"><button class="a11y-chip" data-key="fontsize" data-val="m" aria-pressed="true">רגיל</button><button class="a11y-chip" data-key="fontsize" data-val="l" aria-pressed="false">גדול</button><button class="a11y-chip" data-key="fontsize" data-val="xl" aria-pressed="false">ענק</button></div></div>
+    <div class="a11y-row"><span>הדגשת קישורים</span><div class="a11y-ctrls"><button class="a11y-chip" data-key="links" data-val="off" aria-pressed="true">כבוי</button><button class="a11y-chip" data-key="links" data-val="highlight" aria-pressed="false">הדגש</button></div></div>
+    <div class="a11y-row"><span>עצירת אנימציות</span><div class="a11y-ctrls"><button class="a11y-chip" data-key="motion" data-val="on" aria-pressed="true">פועל</button><button class="a11y-chip" data-key="motion" data-val="off" aria-pressed="false">עצור</button></div></div>
+    <button class="a11y-reset">איפוס להגדרות ברירת מחדל</button>
+    <p class="a11y-note">נתקלתם בבעיה? <a href="accessibility.html">להצהרת הנגישות</a></p>
+  </div>
+
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/site.js?v=1"></script>
 </body>
 </html>

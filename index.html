@@ -1,417 +1,309 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="no-js">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#17110C" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com mailto:; frame-ancestors 'none'; upgrade-insecure-requests" />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-  <title>ליאב שמעונוב · שף פרטי | ארוחות שף בבית שלכם — אשדוד והדרום</title>
-  <meta name="description" content="ליאב שמעונוב — שף פרטי לארוחות אינטימיות, אירועים ווילות אירוח. תפריט אישי, מרכיבים טריים וחוויית טעם שמשאירה חותם. הזמינו במרחק שיחה." />
-  <meta name="keywords" content="שף פרטי, שף פרטי אשדוד, ארוחת שף, שף לאירועים, קייטרינג יוקרתי, שף פרטי לוילה, סדנת דגים, ליאב שמעונוב" />
-  <meta name="author" content="Liav Shimonov" />
-  <link rel="canonical" href="https://liavshimonov.co.il/" />
-
+  <title>ליאב שמעונוב · שף פרטי — ארוחות שף בבית ואירועים</title>
+  <meta name="description" content="ליאב שמעונוב, שף פרטי. ארוחות שף פרטיות בבית שלכם ואירועים — תפריט שנבנה סביבכם, מבושל ומוגש במקום. אוכל. אנשים. חוויות." />
+  <link rel="canonical" href="https://oriantoledano-ship-it.github.io/liav-chef/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:title" content="ליאב שמעונוב · שף פרטי" />
-  <meta property="og:description" content="ארוחות שף פרטיות בבית שלכם. תפריט מותאם אישית. אשדוד והדרום." />
-  <meta property="og:image" content="https://liavshimonov.co.il/assets/real/liav_post_8.jpg" />
+  <meta property="og:description" content="ארוחות שף פרטיות בבית ואירועים. אוכל. אנשים. חוויות." />
+  <meta property="og:image" content="https://oriantoledano-ship-it.github.io/liav-chef/assets/img/hero-wide-1200.jpg" />
+  <meta property="og:url" content="https://oriantoledano-ship-it.github.io/liav-chef/" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="stylesheet" href="assets/enhance.css" />
-  <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/makeover.css" />
+  <meta name="theme-color" content="#14100d" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
-
-  <noscript><style>
-    .loader,.reveal-curtain,.cursor{ display:none !important; }
-    .will-rise,.will-fade,.hero__fade{ opacity:1 !important; transform:none !important; }
-    .will-clip{ clip-path:none !important; }
-    .gallery__viewport{ overflow-x:auto !important; }
-  </style></noscript>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/hero-wide-2000.jpg" media="(min-width:761px)" />
+  <link rel="preload" as="image" href="assets/img/hero-tall-800.jpg" media="(max-width:760px)" />
+  <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/site.css?v=1" />
+  <script src="assets/boot.js?v=1"></script>
+  <noscript><style>.ld{display:none!important}</style></noscript>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":["LocalBusiness","FoodEstablishment"],
-    "name":"ליאב שמעונוב - שף פרטי","alternateName":"Liav private chef",
-    "description":"שף פרטי לארוחות אינטימיות, אירועים ווילות אירוח באשדוד ובדרום.",
-    "telephone":"+972-54-208-8166","url":"https://liavshimonov.co.il/",
-    "areaServed":[{"@type":"City","name":"אשדוד"},{"@type":"AdministrativeArea","name":"מחוז דרום, ישראל"}],
-    "priceRange":"₪₪₪","servesCuisine":["מטבח ים תיכוני","מטבח שף פרטי","מנות דגים"],
-    "sameAs":["https://www.instagram.com/liav_shimonov_/","https://www.threads.com/@liav_shimonov_"]
-  }
+  {"@context":"https://schema.org","@type":"Person","name":"ליאב שמעונוב","jobTitle":"שף פרטי","description":"ארוחות שף פרטיות בבית ואירועים","url":"https://oriantoledano-ship-it.github.io/liav-chef/","image":"https://oriantoledano-ship-it.github.io/liav-chef/assets/img/chef-tuna-800.jpg","sameAs":["https://www.instagram.com/liav_shimonov_/","https://www.threads.com/@liav_shimonov_"]}
   </script>
 </head>
 <body>
   <a href="#main" class="skip">דילוג לתוכן המרכזי</a>
 
-  <!-- ===== CURSOR ===== -->
-  <div class="cursor" aria-hidden="true"></div>
-  <div class="cursor cursor--ring" aria-hidden="true"></div>
-
-  <!-- ===== LOADER ===== -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__count" data-count>0</div>
-    <div class="loader__inner">
-      <div class="loader__word" data-loader-word>ליאב שמעונוב</div>
-      <div class="loader__sub" data-loader-sub>שף פרטי · אשדוד והדרום</div>
-    </div>
-    <div class="loader__bar" data-loader-bar></div>
+  <div class="ld" id="ld" aria-hidden="true">
+    <div class="ld__f"><img src="assets/img/ld-cut-900.jpg" alt="" /></div>
+    <div class="ld__f"><img src="assets/img/ld-plate-900.jpg" alt="" /></div>
+    <div class="ld__f"><img src="assets/img/ld-drizzle-900.jpg" alt="" /></div>
+    <div class="ld__f"><img src="assets/img/ld-candle-900.jpg" alt="" /></div>
+    <picture class="ld__f ld__f--hero">
+      <source media="(max-width:760px)" srcset="assets/img/hero-tall-800.jpg 533w, assets/img/hero-tall-1400.jpg 933w, assets/img/hero-tall-2048.jpg 1365w" sizes="100vw" />
+      <img src="assets/img/hero-wide-2000.jpg" srcset="assets/img/hero-wide-1200.jpg 1200w, assets/img/hero-wide-2000.jpg 1600w" sizes="100vw" alt="" />
+    </picture>
+    <div class="ld__cap"><span class="ld__name"><span>ליאב שמעונוב</span></span><span class="ld__line"><i></i></span></div>
   </div>
 
-  <!-- ===== NAV ===== -->
-  <header class="nav" role="banner">
-    <div class="shell shell--wide nav__row">
-      <a href="#top" class="brand" aria-label="ליאב שמעונוב שף פרטי — לעמוד הראשי">
-        <span>ליאב שמעונוב</span>
-        <span class="brand__mark">שף פרטי</span>
-      </a>
-      <nav aria-label="ניווט ראשי">
-        <ul class="nav__menu">
-          <li><a href="#about">הסיפור</a></li>
-          <li><a href="#services">שירותים</a></li>
-          <li><a href="#gallery">מהמטבח</a></li>
-          <li><a href="#process">איך זה עובד</a></li>
-          <li><a href="#reviews">המלצות</a></li>
-        </ul>
+  <header class="nav" id="nav">
+    <div class="shell nav__row">
+      <a href="#top" class="brand" aria-label="ליאב שמעונוב, שף פרטי — לראש העמוד"><b>ליאב שמעונוב</b><small>שף פרטי</small></a>
+      <nav class="nav__links" aria-label="ניווט ראשי">
+        <a href="#gallery">הגלריה</a>
+        <a href="#atmosphere">אווירה</a>
+        <a href="#services">מה מזמינים</a>
+        <a href="#journal">מאמרים</a>
+        <a href="#contact">יצירת קשר</a>
       </nav>
-      <a href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener noreferrer" class="nav__cta" data-magnetic>
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.2 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.02A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.24.68-1.42 1.3-1.97 1.38-.5.08-1.14.11-1.84-.12-.42-.13-.97-.31-1.67-.62-2.94-1.27-4.86-4.23-5-4.42-.15-.2-1.2-1.59-1.2-3.03s.76-2.15 1.03-2.44c.27-.29.58-.37.78-.37l.56.01c.18.01.42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.38 1.47.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
-        <span>קבעו ארוחה</span>
-      </a>
-      <button class="nav__burger" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="drawer"><span aria-hidden="true"></span></button>
+      <a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer" class="btn btn--light nav__cta">להזמנת ערב</a>
+      <button class="burger" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
     </div>
   </header>
-
-  <aside id="drawer" class="drawer" aria-hidden="true" aria-label="תפריט ניווט">
-    <a href="#about">הסיפור</a>
-    <a href="#services">שירותים</a>
-    <a href="#gallery">מהמטבח</a>
-    <a href="#process">איך זה עובד</a>
-    <a href="#reviews">המלצות</a>
-    <a href="https://wa.me/972542088166" class="nav__cta" target="_blank" rel="noopener noreferrer">שלחו הודעה בוואטסאפ</a>
-  </aside>
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <a href="#gallery">הגלריה</a>
+    <a href="#atmosphere">אווירה</a>
+    <a href="#services">מה מזמינים</a>
+    <a href="#journal">מאמרים</a>
+    <a href="#contact">יצירת קשר</a>
+    <div class="drawer__foot"><a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer">הודעה באינסטגרם</a><a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer">וואטסאפ</a></div>
+  </div>
 
   <main id="main">
-
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="top">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="shell shell--wide hero__grid">
+    <section class="hero" id="top" aria-label="ליאב שמעונוב, שף פרטי">
+      <picture class="hero__media">
+        <source media="(max-width:760px)" srcset="assets/img/hero-tall-800.jpg 533w, assets/img/hero-tall-1400.jpg 933w, assets/img/hero-tall-2048.jpg 1365w" sizes="100vw" />
+        <img src="assets/img/hero-wide-2000.jpg" srcset="assets/img/hero-wide-1200.jpg 1200w, assets/img/hero-wide-2000.jpg 1600w" sizes="100vw" alt="שולחן ארוך ערוך לארוחת שף: נרות דולקים, פרחים בבקבוקי זכוכית וכוסות ירוקות" fetchpriority="high" />
+      </picture>
+      <div class="shell hero__in">
         <div>
-          <h1 class="hero__title">
-            <span class="row" data-split>טעם שמשאיר</span>
-            <span class="row" data-split><span class="accent">חותם</span></span>
-            <span class="row" data-split>אצלכם בבית.</span>
-          </h1>
-          <p class="hero__sub hero__fade">אני ליאב. מגיע אליכם עם רשימת קניות אישית, סכינים משלי וארוחה שממשיכים לדבר עליה גם אחרי שהאורחים הלכו. כל תפריט נתפר בדיוק לרגע, למקום ולאנשים שסביב השולחן.</p>
-          <div class="hero__ctas hero__fade">
-            <a href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%90%D7%A8%D7%95%D7%97%D7%94" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-magnetic>
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.2 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.02A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.24.68-1.42 1.3-1.97 1.38-.5.08-1.14.11-1.84-.12-.42-.13-.97-.31-1.67-.62-2.94-1.27-4.86-4.23-5-4.42-.15-.2-1.2-1.59-1.2-3.03s.76-2.15 1.03-2.44c.27-.29.58-.37.78-.37l.56.01c.18.01.42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.38 1.47.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
-              <span>קבעו ארוחה בוואטסאפ</span>
-            </a>
-            <a href="tel:+972542088166" class="btn btn--ghost" data-magnetic>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3.2a2 2 0 0 1-2.2 2 20 20 0 0 1-8.7-3.1 20 20 0 0 1-6.1-6.1 20 20 0 0 1-3.1-8.7A2 2 0 0 1 3.9 2h3.2a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2Z"/></svg>
-              <span>054-208-8166</span>
-            </a>
-          </div>
-          <div class="hero__meta hero__fade">
-            <div><span class="hero__meta__k">אזור פעילות</span><span class="hero__meta__v">אשדוד והדרום</span></div>
-            <div><span class="hero__meta__k">הסגנון</span><span class="hero__meta__v">מטבח שף עונתי</span></div>
-            <div><span class="hero__meta__k">היקף</span><span class="hero__meta__v">2 עד 60 סועדים</span></div>
+          <h1><span class="ln"><span>ליאב</span></span><span class="ln"><span>שמעונוב</span></span></h1>
+          <p class="hero__sub" data-h="2"><b>שף פרטי.</b> אוכל. אנשים. חוויות.</p>
+          <div class="hero__cta" data-h="3">
+            <a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer" class="btn btn--light">להזמנת ערב
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+            <a href="#gallery" class="btn btn--line">לגלריה</a>
           </div>
         </div>
-        <div class="hero__visual hero__fade">
-          <figure class="hero__frame">
-            <img data-parallax-img src="assets/real/liav_post_8.jpg" alt="עמדת ההכנה של ליאב — סכין שף, פילוט דגים וסלמון טרי" loading="eager" />
-          </figure>
+        <div class="hero__side" data-h="4">
+          <p>ארוחות פרטיות בבית<br />ואירועים</p>
+          <span class="hero__cue"><i></i> גללו</span>
         </div>
       </div>
-      <span class="hero__scroll hero__fade" aria-hidden="true"><i></i> גללו למטה</span>
     </section>
 
-    <!-- ===== MARQUEE ===== -->
-    <div class="marquee" role="presentation" aria-hidden="true">
-      <div class="marquee__track" data-marquee>
-        <span class="marquee__item">ארוחות שף פרטיות</span>
-        <span class="marquee__item">וילה עם בריכה</span>
-        <span class="marquee__item">סדנת פילוט דגים</span>
-        <span class="marquee__item">אירועים פרטיים</span>
-        <span class="marquee__item">תפריט מותאם אישית</span>
-        <span class="marquee__item">מרכיבים עונתיים</span>
-        <span class="marquee__item">אשדוד והדרום</span>
-      </div>
-    </div>
-
-    <!-- ===== ABOUT ===== -->
     <section class="sec" id="about">
-      <div class="shell about__grid">
-        <div class="about__media">
-          <figure class="about__frame"><img data-parallax-img style="object-position:center 22%" src="assets/real/liav_face.jpg" alt="ליאב שמעונוב עורך שולחן אירוח בערב פרטי" loading="lazy" /></figure>
-          <span class="about__badge">אשדוד · ישראל</span>
-          <div class="about__stat"><b>7+</b><span>שנות מטבח</span></div>
+      <div class="shell about">
+        <div class="about__txt">
+          <h2 class="h2" data-split><span class="ln"><span>המסעדה,</span></span><span class="ln"><span>אצלכם <em>בבית.</em></span></span></h2>
+          <p class="rv">אני ליאב, שף פרטי. אני מגיע אליכם עם חומרי הגלם, הסכינים והתפריט — ומבשל ומגיש הכול במקום. ארוחה לחברים ולמשפחה, או אירוע שלם.</p>
+          <p class="rv">כל ערב מתחיל בשיחה: כמה תהיו, מה אתם אוהבים ומה פחות. משם אני בונה תפריט שמתאים בדיוק לשולחן שלכם, ואתם נשארים עם האורחים.</p>
+          <div class="about__sig rv"><b>ליאב שמעונוב</b> שף פרטי</div>
         </div>
-        <div class="about__body">
-          <h2 class="h2 will-rise" style="margin:0 0 26px">הסיפור מאחורי<br/>המחבת.</h2>
-          <p class="big will-rise">החלטתי להביא את המסעדה אליכם הביתה — עם קפדנות של שף, גישה של חבר שבא לבשל, וסבלנות למחוות הקטנות שעושות את ההבדל.</p>
-          <p class="will-rise">המטבח הוא המקום הכי כן בבית. שם אין מסכות — רק אש, סכין ומרכיבים שלא יודעים לשקר. אני מגיע עם הכלים, המרכיבים והחוויה, ומשאיר אחריי שולחן מסודר וזיכרון של ארוחה שלא תשכחו.</p>
-          <p class="will-rise">כל תפריט נכתב בהתאמה אישית: קורא לאורחים, מקשיב לטעמים, מבין את הרגע. בין אם זו ארוחה אינטימית לשניים או וילה מלאה בחברים — הפרטים הקטנים הם המקצוע שלי.</p>
-          <div class="about__sign will-rise"><b>ליאב שמעונוב</b><div><span>שף פרטי · מטבח עונתי</span></div>
-            <svg class="about__flourish" viewBox="0 0 224 46" aria-hidden="true"><path d="M6 30C24 8 52 6 70 24c8 8 2 20-8 16-9-4-6-18 6-22 16-5 30 8 44 12 18 5 30-14 50-10 15 3 20 16 38 8 6-3 12-9 16-14"/></svg>
-          </div>
+        <div class="about__pics">
+          <div class="pic pic--rv pic--par about__main"><img src="assets/img/chef-tuna-800.jpg" srcset="assets/img/chef-tuna-800.jpg 533w, assets/img/chef-tuna-1400.jpg 933w" sizes="(max-width:900px) 92vw, 44vw" alt="ליאב במעיל שף שחור מחזיק נתח טונה טרי במטבח" loading="lazy" /></div>
+          <div class="pic pic--rv about__small"><img src="assets/img/chef-flame-1000.jpg" alt="מחבת על האש עם להבה במטבח" loading="lazy" /></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 3D DECONSTRUCTION ===== -->
-    <section class="fx3d" data-fx3d data-fx3d-src="assets/real/liav_post_5.jpg" aria-label="טרטר הטונה — הדגמה תלת ממדית">
-      <div class="fx3d__stage">
-        <div class="fx3d__head">
-          <h2 class="h2">מנה טובה היא<br/>הרכבה מדויקת.</h2>
-          <p class="fx3d__hint" aria-hidden="true">גללו — ותראו אותה מתחברת</p>
-        </div>
-        <div class="fx3d__canvas" data-fx3d-canvas>
-          <img class="fx3d__fallback" src="assets/real/liav_post_5.jpg" alt="טרטר טונה בהדרים — מנת החתימה" loading="lazy" />
-        </div>
-        <div class="fx3d__cap" data-fx3d-cap>
-          <b>טרטר טונה בהדרים</b>
-          <span>מנת חתימה · 12 מרכיבים · הרכבה אחת</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SERVICES ===== -->
-    <section class="sec" id="services">
+    <section class="sec sec--linen" id="gallery">
       <div class="shell">
-        <div class="sec-head">
-          <div><h2 class="h2 will-rise">ארבע דרכים<br/>לשבת יחד.</h2></div>
-          <p class="sec-head__lede will-rise">כל שירות מתחיל בשיחה קצרה — כמה אתם, מה אתם אוהבים, איפה נפגשים. משם אני לוקח הכל.</p>
-        </div>
-        <div class="svc-list">
-          <a href="https://wa.me/972542088166?text=%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%91%D7%90%D7%A8%D7%95%D7%97%D7%AA%20%D7%A9%D7%A3%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA" target="_blank" rel="noopener noreferrer" class="svc will-rise" data-cursor="hot">
-            <span class="svc__idx">01</span>
-            <div class="svc__main">
-              <div class="svc__title">ארוחת שף פרטית</div>
-              <p class="svc__desc">ארוחת ערב מכל הלב, במטבח שלכם. תפריט של 4–7 מנות שנבנה סביבכם, מרכיבים טריים מאותו הבוקר, ואני מבשל ומגיש בזמן אמת.</p>
-            </div>
-            <span class="svc__peek" aria-hidden="true"><img src="assets/real/liav_post_5.jpg" alt="" loading="lazy" /></span>
-            <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-          <a href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%9E%D7%97%D7%A4%D7%A9%D7%99%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%91%D7%95%D7%99%D7%9C%D7%94" target="_blank" rel="noopener noreferrer" class="svc will-rise" data-cursor="hot">
-            <span class="svc__idx">02</span>
-            <div class="svc__main">
-              <div class="svc__title">וילת אירוח עם בריכה</div>
-              <p class="svc__desc">חוויה מלאה בלי לארח בבית. אני מגיע לוילה שלכם עם צוות, שולחן ערוך ואווירה שמתגלגלת מהצהריים עד הכוכבים.</p>
-            </div>
-            <span class="svc__peek" aria-hidden="true"><img src="assets/real/liav_post_9.jpg" alt="" loading="lazy" /></span>
-            <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-          <a href="https://wa.me/972542088166?text=%D7%A8%D7%95%D7%A6%D7%94%2F%D7%94%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A1%D7%93%D7%A0%D7%AA%20%D7%A4%D7%99%D7%9C%D7%95%D7%98%20%D7%93%D7%92%D7%99%D7%9D" target="_blank" rel="noopener noreferrer" class="svc will-rise" data-cursor="hot">
-            <span class="svc__idx">03</span>
-            <div class="svc__main">
-              <div class="svc__title">סדנת פילוט וחיתוך דגים</div>
-              <p class="svc__desc">אני פותח דגים מול העיניים שלכם ומסביר את כל מה שהעולם המסחרי מסתיר. הקבוצה עובדת, טועמת, ויוצאת עם טכניקה שנשארת לחיים.</p>
-            </div>
-            <span class="svc__peek" aria-hidden="true"><img src="assets/real/liav_post_10.jpg" alt="" loading="lazy" /></span>
-            <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-          <a href="https://wa.me/972542088166?text=%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%90%D7%99%D7%A8%D7%95%D7%A2%20%D7%A9%D7%90%D7%A0%D7%99%20%D7%9E%D7%AA%D7%9B%D7%A0%D7%9F" target="_blank" rel="noopener noreferrer" class="svc will-rise" data-cursor="hot">
-            <span class="svc__idx">04</span>
-            <div class="svc__main">
-              <div class="svc__title">אירועים ופסטיבלים</div>
-              <p class="svc__desc">עמדת שף שמייצרת מגש אחרי מגש — אירוע חברה, ערב מיוחד, או הופעה בפסטיבל אוכל. אמיתי, יפה, ומחובר לאווירה סביב.</p>
-            </div>
-            <span class="svc__peek" aria-hidden="true"><img src="assets/real/liav_post_1.jpg" alt="" loading="lazy" /></span>
-            <span class="svc__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== GALLERY (horizontal) ===== -->
-    <section class="gallery" id="gallery">
-      <div class="gallery__head">
-        <div class="sec-head">
-          <div><h2 class="h2 will-rise">מנות ורגעים<br/>שאני גאה בהם.</h2></div>
-          <p class="sec-head__lede will-rise">מבחר מהאירועים והארוחות של השנה האחרונה. גללו הצידה — כל תמונה, שולחן אחד, ערב אחד שקרה.</p>
-        </div>
-      </div>
-      <div class="swiper gallery-swiper" data-gallery-swiper>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_5.jpg" alt="טרטר טונה בליווי רוטב הדרים חריף" loading="lazy" /><span class="gcard__cap"><small>מנה חתומה</small><b>טרטר טונה בהדרים</b></span></a></div>
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_1.jpg" alt="כריך שניצל דגים ביתי בלחמנייה" loading="lazy" /><span class="gcard__cap"><small>מהאירועים</small><b>כריך שניצל דגים</b></span></a></div>
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_9.jpg" alt="מנת פתיחה עם תירס וצ׳ילי ברוטב חמאתי" loading="lazy" /><span class="gcard__cap"><small>מנת פתיחה</small><b>סביצ׳ה תירס וצ׳ילי</b></span></a></div>
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_6.jpg" alt="קרפצ׳יו טונה עם ענבים וירקות בקערה" loading="lazy" /><span class="gcard__cap"><small>מנה קרה</small><b>קרפצ׳יו טונה</b></span></a></div>
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_2.jpg" alt="ליאב מסדר ומתבל פרוסות סלמון על הצלחת" loading="lazy" /><span class="gcard__cap"><small>בעבודה</small><b>סידור סלמון</b></span></a></div>
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_7.jpg" alt="הכנת טרטר דגים טרי לפני ההגשה" loading="lazy" /><span class="gcard__cap"><small>מאחורי הקלעים</small><b>הכנת הטרטר</b></span></a></div>
-          <div class="swiper-slide"><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="gcard" data-cursor="hot"><img src="assets/real/liav_post_4.jpg" alt="מבט קרוב על טרטר טונה בהגשה אלגנטית" loading="lazy" /><span class="gcard__cap"><small>מבט מקרוב</small><b>אותה מנה, זווית אחרת</b></span></a></div>
-        </div>
-        <div class="gallery-swiper__nav">
-          <button class="gnav gnav--prev" aria-label="הקודם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
-          <div class="gallery-swiper__count"><span data-swiper-current>1</span> / <span data-swiper-total>7</span></div>
-          <button class="gnav gnav--next" aria-label="הבא"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
-        </div>
-      </div>
-      <div class="shell gallery__foot">
-        <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" data-magnetic>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          <span>לגלריה המלאה באינסטגרם</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- ===== PROCESS (light island) ===== -->
-    <section class="sec sec--light" id="process">
-      <div class="shell">
-        <div class="sec-head">
-          <div><h2 class="h2 will-rise">מהשיחה<br/>עד השקט שאחרי.</h2></div>
-          <p class="sec-head__lede will-rise">בלי הפתעות ובלי אותיות קטנות. ארבעה רגעים, מהטלפון הראשון ועד שאני נועל אחריי את הדלת.</p>
-        </div>
-        <div class="chapters">
-          <article class="chapter will-rise">
-            <span class="chapter__idx" aria-hidden="true" data-ch-idx>01</span>
-            <div class="chapter__body">
-              <span class="chapter__when">רבע שעה בטלפון</span>
-              <h3 class="chapter__t">קודם כול, מכירים</h3>
-              <p class="chapter__d">כמה אתם, מה אתם אוהבים, ומה בשום אופן לא. איזו אווירה אתם מדמיינים. בסוף השיחה כבר יש לי את הכיוון בראש.</p>
-            </div>
-          </article>
-          <article class="chapter will-rise">
-            <span class="chapter__idx" aria-hidden="true" data-ch-idx>02</span>
-            <div class="chapter__body">
-              <span class="chapter__when">תוך יומיים־שלושה</span>
-              <h3 class="chapter__t">התפריט נכתב עליכם</h3>
-              <p class="chapter__d">אני שולח תפריט מותאם אישית, מחיר סופי בלי כוכביות, ולוח זמנים מסודר ליום עצמו. משנים ביחד עד שזה מרגיש נכון.</p>
-            </div>
-          </article>
-          <article class="chapter will-rise">
-            <span class="chapter__idx" aria-hidden="true" data-ch-idx>03</span>
-            <div class="chapter__body">
-              <span class="chapter__when">ביום עצמו</span>
-              <h3 class="chapter__t">אני משתלט על המטבח</h3>
-              <p class="chapter__d">מגיע שעתיים מראש עם הכול, מסדר, מבשל ומגיש בזמן אמת. אתם יושבים עם האורחים — ונכנסים למטבח רק אם בא לכם.</p>
-            </div>
-          </article>
-          <article class="chapter will-rise">
-            <span class="chapter__idx" aria-hidden="true" data-ch-idx>04</span>
-            <div class="chapter__body">
-              <span class="chapter__when">בסוף הערב</span>
-              <h3 class="chapter__t">ונעלם בלי להשאיר סימן</h3>
-              <p class="chapter__d">השולחן מלא, הכוסות מתרוקנות — ואני אורז, מנקה, ומחזיר לכם מטבח לפחות כמו שהיה. זו לא בקשה, זו הבטחה.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== REVIEWS ===== -->
-    <section class="sec" id="reviews">
-      <div class="shell">
-        <div class="sec-head">
-          <div><h2 class="h2 will-rise">סועדים מספרים<br/>בגוף ראשון.</h2></div>
-          <p class="sec-head__lede will-rise">הביקורת הכי חשובה היא שולחן שנדם לרגע כי כולם אוכלים — ואחריו ההודעות. אלה כמה שנשארו אצלי.</p>
-        </div>
-        <div class="reviews__grid">
-          <article class="review will-rise"><div class="review__stars" aria-label="חמישה כוכבים">★★★★★</div><p class="review__body">ליאב הגיע אלינו לוילה עם 30 אורחים, לקח פיקוד על המטבח בשקט מוחלט והגיש ארוחה שסחפה את כולם. חודשיים אחרי עדיין מדברים על הדג.</p><div class="review__by"><div><b>אלון ר.</b><span>ערב הולדת ׳45 — קיסריה</span></div></div></article>
-          <article class="review will-rise"><div class="review__stars" aria-label="חמישה כוכבים">★★★★★</div><p class="review__body">רצינו ערב שקט לזוגות חברים. ליאב הפך את הסלון שלנו למסעדת שף. תפריט קשוב לאלרגיות, ואפילו האמא הכי ביקורתית הודתה שלא זכרה מתי אכלה ככה.</p><div class="review__by"><div><b>דנה ל.</b><span>ערב זוגות — תל אביב</span></div></div></article>
-          <article class="review will-rise"><div class="review__stars" aria-label="חמישה כוכבים">★★★★★</div><p class="review__body">סדנת פילוט דגים לצוות של 15 עובדים. חשבתי שזה יהיה טכני ומייגע — יצא הערב הכי מהנה שהיה לנו. כולם עבדו, טעמו וצחקו. איש מקצוע ובן אדם.</p><div class="review__by"><div><b>יונתן ס.</b><span>אירוע חברה — הרצליה</span></div></div></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FAQ ===== -->
-    <section class="sec" id="faq">
-      <div class="shell">
-        <div class="sec-head">
-          <div><h2 class="h2 will-rise">שאלות שאני<br/>נשאל הכי הרבה.</h2></div>
-          <p class="sec-head__lede will-rise">לא מצאתם תשובה? שלחו הודעה בוואטסאפ ואחזור מייד.</p>
-        </div>
-        <div class="faq will-rise">
-          <details data-faq><summary>איך בונים תפריט אישי?<span class="faq__pm" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span></summary><div class="faq__a">מתחילים בשיחת טלפון של רבע שעה — מה אתם אוהבים, מה לא, אילו רגישויות יש בשולחן, ואיזו אווירה. תוך יומיים־שלושה מקבלים הצעת תפריט של 4–7 מנות עם אפשרויות החלפה, ואחרי אישור אנחנו סגורים.</div></details>
-          <details data-faq><summary>לכמה סועדים אפשר לקבוע?<span class="faq__pm" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span></summary><div class="faq__a">ארוחות פרטיות מזוג ועד כ־25 סועדים. אירועים, וילות ופסטיבלים — עד 60 סועדים עם צוות. גם ארוחת שף אינטימית לשניים־שלושה היא מהאהובות עליי.</div></details>
-          <details data-faq><summary>איפה אתה נותן שירות?<span class="faq__pm" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span></summary><div class="faq__a">בסיס הפעילות באשדוד. מגיע לכל הדרום, שפלה, ירושלים ותל אביב באופן קבוע. ואם יש לכם וילה יפה בצפון — בואו נדבר, אני אוהב לנסוע לארוחה טובה.</div></details>
-          <details data-faq><summary>מה כלול במחיר?<span class="faq__pm" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span></summary><div class="faq__a">קניית כל המרכיבים ברמה הטובה ביותר, הבישול המלא בבית שלכם, ההגשה, וכל הכלים המקצועיים שאני מביא. אתם מספקים שולחן וצלחות (אלא אם ביקשתם שאביא). ניקוי מלא של המטבח אחרי — כלול.</div></details>
-          <details data-faq><summary>מתאים לרגישויות ודיאטות?<span class="faq__pm" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span></summary><div class="faq__a">בהחלט. צמחוני, טבעוני, ללא גלוטן, אלרגיות, כשרות — הכל אפשרי בתיאום מראש. אני לא מוותר על הטעם רק בגלל הגבלה, נמצא את הפתרון האלגנטי.</div></details>
-          <details data-faq><summary>כמה זמן מראש להזמין?<span class="faq__pm" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span></summary><div class="faq__a">לארוחה פרטית — כשבועיים מראש. לאירוע גדול או וילה — חודש לפחות. אוגוסט, חגים וסופ״ש חורף מתמלאים מהר, אז אם יש תאריך ביד כדאי לתפוס.</div></details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA ===== -->
-    <section class="cta" id="contact">
-      <div class="cta__bg" aria-hidden="true"></div>
-      <div class="shell">
-        <div class="cta__grid">
+        <div class="head">
           <div>
-            <h2 class="h2 will-rise" style="margin:0 0 22px">בואו נבשל<br/>משהו לזכור.</h2>
-            <p class="cta__lede will-rise">שלחו הודעה קצרה — תאריך משוער, כמה סועדים ואיזה שירות מעניין. אני חוזר תוך שעות בודדות עם תשובה ותפריט ראשוני.</p>
-            <div class="cta__ctas will-rise">
-              <a href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener noreferrer" class="btn btn--wa btn--lg" data-magnetic>
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.2 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.02A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.24.68-1.42 1.3-1.97 1.38-.5.08-1.14.11-1.84-.12-.42-.13-.97-.31-1.67-.62-2.94-1.27-4.86-4.23-5-4.42-.15-.2-1.2-1.59-1.2-3.03s.76-2.15 1.03-2.44c.27-.29.58-.37.78-.37l.56.01c.18.01.42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.38 1.47.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
-                <span>וואטסאפ ישיר</span>
-              </a>
-              <a href="tel:+972542088166" class="btn btn--ghost btn--lg" data-magnetic>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3.2a2 2 0 0 1-2.2 2 20 20 0 0 1-8.7-3.1 20 20 0 0 1-6.1-6.1 20 20 0 0 1-3.1-8.7A2 2 0 0 1 3.9 2h3.2a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2Z"/></svg>
-                <span>054-208-8166</span>
-              </a>
-            </div>
+            <h2 class="h2" data-split><span class="ln"><span>מהשולחן.</span></span></h2>
+            <p class="lede rv">טונה שנפרסת מול העיניים, לחמים שיוצאים חמים, ושולחן שלא ממהרים לקום ממנו.</p>
           </div>
-          <aside class="cta__card will-rise">
-            <h4>פרטי יצירת קשר</h4>
-            <a class="cline" href="tel:+972542088166"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.9v3.2a2 2 0 0 1-2.2 2 20 20 0 0 1-8.7-3.1 20 20 0 0 1-6.1-6.1 20 20 0 0 1-3.1-8.7A2 2 0 0 1 3.9 2h3.2a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2Z"/></svg><span><b>054-208-8166</b><br/><small style="color:var(--ink-faint);font-size:12px">שיחה ישירה</small></span></a>
-            <a class="cline" href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.2 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.02A9.82 9.82 0 0 0 12.04 2Z"/></svg><span><b>WhatsApp</b><br/><small style="color:var(--ink-faint);font-size:12px">התשובה הכי מהירה</small></span></a>
-            <a class="cline" href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span><b>@liav_shimonov_</b><br/><small style="color:var(--ink-faint);font-size:12px">אינסטגרם</small></span></a>
-            <div class="cline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><b>אשדוד והדרום</b><br/><small style="color:var(--ink-faint);font-size:12px">מגיע גם למרכז וירושלים</small></span></div>
-          </aside>
+          <div class="filters rv" role="group" aria-label="סינון הגלריה">
+            <button type="button" data-filter="all" aria-pressed="true">הכול</button>
+            <button type="button" data-filter="dish" aria-pressed="false">מנות</button>
+            <button type="button" data-filter="kitchen" aria-pressed="false">במטבח</button>
+            <button type="button" data-filter="table" aria-pressed="false">סביב השולחן</button>
+          </div>
+        </div>
+        <div class="grid" id="grid">
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-tartare-1600.jpg"><img src="assets/img/g-tartare-800.jpg" alt="טרטר טונה על בסיס אבוקדו עם עשבי תיבול, בצלחת לבנה" loading="lazy" width="533" height="800" /><figcaption>טרטר טונה</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-cut-1600.jpg"><img src="assets/img/g-cut-800.jpg" alt="סכין שף חותכת קוביית טונה על קרש לבן" loading="lazy" width="600" height="800" /><figcaption>חיתוך טונה</figcaption></button>
+          <button type="button" class="gi" data-cat="table" data-full="assets/img/g-serve-1600.jpg"><img src="assets/img/g-serve-800.jpg" alt="ליאב מגיש מנות לאורחים סביב שולחן האוכל" loading="lazy" width="533" height="800" /><figcaption>מגישים</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-carpaccio-1600.jpg"><img src="assets/img/g-carpaccio-800.jpg" alt="קרפצ׳יו פרוס דק עם שום קונפי ורוטב כהה" loading="lazy" width="533" height="800" /><figcaption>קרפצ׳יו</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-steak-1600.jpg"><img src="assets/img/g-steak-800.jpg" alt="סטייק צלוי עם סימני גריל על קרש עץ" loading="lazy" width="533" height="800" /><figcaption>סטייק מהגריל</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-loin-1600.jpg"><img src="assets/img/g-loin-800.jpg" alt="נתח טונה אדום וטרי על משטח לבן" loading="lazy" width="533" height="800" /><figcaption>נתח טונה טרי</figcaption></button>
+          <button type="button" class="gi" data-cat="table" data-full="assets/img/g-toast-1600.jpg"><img src="assets/img/g-toast-800.jpg" alt="אורחים מרימים כוסות לחיים סביב השולחן" loading="lazy" width="533" height="800" /><figcaption>לחיים</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-eggplant-1600.jpg"><img src="assets/img/g-eggplant-800.jpg" alt="חציל שרוף עם טחינה, עגבניות ושמן זית" loading="lazy" width="533" height="800" /><figcaption>חציל שרוף וטחינה</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-spoon-1600.jpg"><img src="assets/img/g-spoon-800.jpg" alt="ידיים מסדרות שום קונפי על מנה בכף" loading="lazy" width="533" height="800" /><figcaption>הרכבת המנה</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-bread-1600.jpg"><img src="assets/img/g-bread-800.jpg" alt="לחמים חמים ושחומים על קרש עץ" loading="lazy" width="533" height="800" /><figcaption>לחמים חמים</figcaption></button>
+          <button type="button" class="gi" data-cat="table" data-full="assets/img/g-napkin-1600.jpg"><img src="assets/img/g-napkin-800.jpg" alt="צלחת לבנה עם מפית תחרה וטבעת עץ, סכו״ם כסף" loading="lazy" width="600" height="800" /><figcaption>השולחן מוכן</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-tuna-bite-1600.jpg"><img src="assets/img/g-tuna-bite-800.jpg" alt="יד מרימה ביס טונה מצלחת הגשה" loading="lazy" width="533" height="800" /><figcaption>ביס טונה</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-slice-steak-1600.jpg"><img src="assets/img/g-slice-steak-800.jpg" alt="פריסת סטייק בסכין דמשקאית על קרש עץ עגול" loading="lazy" width="533" height="800" /><figcaption>פריסת סטייק</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-steak-board-1600.jpg"><img src="assets/img/g-steak-board-800.jpg" alt="סטייק פרוס על קרש עם ירקות צלויים, מוגש לשולחן" loading="lazy" width="533" height="800" /><figcaption>סטייק פרוס לשולחן</figcaption></button>
+          <button type="button" class="gi" data-cat="table" data-full="assets/img/g-laugh-1600.jpg"><img src="assets/img/g-laugh-800.jpg" alt="אורחים צוחקים ומשוחחים ליד השולחן" loading="lazy" width="533" height="800" /><figcaption>ערב עם חברים</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-avo-dice-1600.jpg"><img src="assets/img/g-avo-dice-800.jpg" alt="חיתוך אבוקדו לקוביות עם כפפה שחורה" loading="lazy" width="533" height="800" /><figcaption>קוביות אבוקדו</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-tuna-oil-1600.jpg"><img src="assets/img/g-tuna-oil-800.jpg" alt="קוביות טונה נאה בשמן זית ועשבי תיבול בצלחת עמוקה" loading="lazy" width="533" height="800" /><figcaption>טונה בשמן זית</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-avocado-1600.jpg"><img src="assets/img/g-avocado-800.jpg" alt="אבוקדו פרוס דק בצלחת הגשה לבנה" loading="lazy" width="533" height="800" /><figcaption>אבוקדו פרוס</figcaption></button>
+          <button type="button" class="gi" data-cat="table" data-full="assets/img/g-salt-1600.jpg"><img src="assets/img/g-salt-800.jpg" alt="סיר מלח קטן על השולחן" loading="lazy" width="600" height="800" /><figcaption>מלח על השולחן</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-blocks-1600.jpg"><img src="assets/img/g-blocks-800.jpg" alt="קוביות טונה חתוכות על קרש" loading="lazy" width="533" height="800" /><figcaption>קוביות טונה</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-stew-1600.jpg"><img src="assets/img/g-stew-800.jpg" alt="תבשיל בשר ברוטב עגבניות עם בצל ירוק" loading="lazy" width="533" height="800" /><figcaption>תבשיל ברוטב עגבניות</figcaption></button>
+          <button type="button" class="gi" data-cat="table" data-full="assets/img/g-phones-1600.jpg"><img src="assets/img/g-phones-800.jpg" alt="אורחים מצלמים את השולחן לפני שמתחילים לאכול" loading="lazy" width="533" height="800" /><figcaption>קודם מצלמים</figcaption></button>
+          <button type="button" class="gi" data-cat="kitchen" data-full="assets/img/g-bread-salt-1600.jpg"><img src="assets/img/g-bread-salt-800.jpg" alt="פיזור מלח על לחמים לפני ההגשה" loading="lazy" width="533" height="800" /><figcaption>תיבול אחרון</figcaption></button>
+          <button type="button" class="gi" data-cat="dish" data-full="assets/img/g-salsa-1600.jpg"><img src="assets/img/g-salsa-800.jpg" alt="סלט קצוץ צבעוני על צלחת הגשה מוארכת" loading="lazy" width="533" height="800" /><figcaption>סלט קצוץ</figcaption></button>
+        </div>
+        <div class="grid__more rv">
+          <a class="link" href="https://shiran.pixieset.com/liavshimonov/" target="_blank" rel="noopener noreferrer">לגלריה המלאה
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg></a>
         </div>
       </div>
     </section>
 
+    <section class="sec car" id="atmosphere">
+      <div class="shell">
+        <div class="head">
+          <h2 class="h2" data-split><span class="ln"><span>ערב שלם,</span></span><span class="ln"><span>לא רק <em>ארוחה.</em></span></span></h2>
+          <p class="lede rv">נרות דולקים, יין שנמזג, מנה שיוצאת מהמטבח בדיוק בזמן — והשיחה שנמשכת הרבה אחרי הקינוח.</p>
+        </div>
+      </div>
+      <div class="swiper car__swiper" data-cursor="גררו">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-flowers-800.jpg" srcset="assets/img/c-flowers-800.jpg 533w, assets/img/c-flowers-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="פרחים בבקבוקי זכוכית ונרות שחורים על השולחן" loading="lazy" /></div><figcaption class="car__cap">פרחים ונרות</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-wine-800.jpg" srcset="assets/img/c-wine-800.jpg 533w, assets/img/c-wine-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="מזיגת יין לבן לכוס ירוקה" loading="lazy" /></div><figcaption class="car__cap">יין לפתיחה</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-garlic-800.jpg" srcset="assets/img/c-garlic-800.jpg 533w, assets/img/c-garlic-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="קערת שום קונפי ליד נר דולק" loading="lazy" /></div><figcaption class="car__cap">שום קונפי</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-serving-800.jpg" srcset="assets/img/c-serving-800.jpg 533w, assets/img/c-serving-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="ליאב מניח מנה על השולחן בין האורחים" loading="lazy" /></div><figcaption class="car__cap">מהמטבח לשולחן</figcaption></figure></div>
+          <div class="swiper-slide is-wide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-candles-900.jpg" srcset="assets/img/c-candles-900.jpg 900w, assets/img/c-candles-1600.jpg 1600w" sizes="(max-width:760px) 86vw, 60vw" alt="צלחות ערוכות, כוסות ירוקות ונרות דולקים לאורך השולחן" loading="lazy" /></div><figcaption class="car__cap">רגע לפני שמתיישבים</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-dahlia-800.jpg" srcset="assets/img/c-dahlia-800.jpg 533w, assets/img/c-dahlia-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="דליה ורודה ועלים בבקבוק על השולחן" loading="lazy" /></div><figcaption class="car__cap">הפרטים הקטנים</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-guests-800.jpg" srcset="assets/img/c-guests-800.jpg 533w, assets/img/c-guests-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="אורחים משוחחים ומחייכים סביב השולחן" loading="lazy" /></div><figcaption class="car__cap">שיחה סביב השולחן</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-garnish-800.jpg" srcset="assets/img/c-garnish-800.jpg 533w, assets/img/c-garnish-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="אצבעות מפזרות גימור אחרון על מנה" loading="lazy" /></div><figcaption class="car__cap">הגימור האחרון</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-plate-800.jpg" srcset="assets/img/c-plate-800.jpg 533w, assets/img/c-plate-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="צלחת לבנה עם מפית תחרה על מפת שולחן" loading="lazy" /></div><figcaption class="car__cap">צלחת שמחכה</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-bottle-800.jpg" srcset="assets/img/c-bottle-800.jpg 533w, assets/img/c-bottle-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="בקבוק יין לבן על השולחן בין המנות" loading="lazy" /></div><figcaption class="car__cap">בקבוק על השולחן</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-saltpot-800.jpg" srcset="assets/img/c-saltpot-800.jpg 533w, assets/img/c-saltpot-1400.jpg 933w" sizes="(max-width:760px) 70vw, 32vw" alt="כלי מלח קטן על מפת שולחן חומה" loading="lazy" /></div><figcaption class="car__cap">מלח גס</figcaption></figure></div>
+          <div class="swiper-slide"><figure class="car__fig"><div class="car__img"><img src="assets/img/c-table-800.jpg" srcset="assets/img/c-table-800.jpg 600w, assets/img/c-table-1400.jpg 1050w" sizes="(max-width:760px) 70vw, 32vw" alt="שולחן ערוך עם פרחים וכוסות, לפני שהאורחים מגיעים" loading="lazy" /></div><figcaption class="car__cap">לפני שהאורחים מגיעים</figcaption></figure></div>
+        </div>
+      </div>
+      <div class="shell">
+        <div class="car__bar">
+          <div class="car__nav">
+            <button type="button" class="car__prev" aria-label="לתמונה הקודמת"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="car__next" aria-label="לתמונה הבאה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          </div>
+          <div class="car__prog" aria-hidden="true"><i></i></div>
+          <div class="car__count" aria-live="polite" dir="ltr"><span data-cur>01</span> / <span data-tot>12</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--bg2" id="services">
+      <div class="shell">
+        <div class="head">
+          <h2 class="h2" data-split><span class="ln"><span>מה</span></span><span class="ln"><span>מזמינים.</span></span></h2>
+          <p class="lede rv">שתי דרכים לשבת לשולחן. בשתיהן התפריט נכתב עבורכם, ובשתיהן אתם לא נכנסים למטבח.</p>
+        </div>
+        <div class="svcs">
+          <a class="svc rv" href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer">
+            <div class="pic pic--rv"><img src="assets/img/s-dinner-700.jpg" srcset="assets/img/s-dinner-700.jpg 403w, assets/img/s-dinner-1200.jpg 690w" sizes="(max-width:760px) 92vw, 46vw" alt="ליאב מגיש מנה לאורחים בארוחה פרטית בבית" loading="lazy" /></div>
+            <h3>ארוחה פרטית בבית</h3>
+            <p>ארוחת שף לחברים או למשפחה, בבית שלכם. תפריט שנבנה סביבכם, מבושל ומוגש במקום.</p>
+            <span class="link">לתיאום ארוחה <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg></span>
+          </a>
+          <a class="svc rv" href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer">
+            <div class="pic pic--rv"><img src="assets/img/s-events-700.jpg" srcset="assets/img/s-events-700.jpg 525w, assets/img/s-events-1200.jpg 900w" sizes="(max-width:760px) 92vw, 46vw" alt="שולחן אירוע ארוך ערוך עם פרחים וכוסות" loading="lazy" /></div>
+            <h3>אירועים</h3>
+            <p>ימי הולדת, ערבי חברה ומפגשים גדולים. השולחן גדל — והיחס נשאר אישי.</p>
+            <span class="link">לתיאום אירוע <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg></span>
+          </a>
+        </div>
+        <div class="steps">
+          <div class="rv"><h3><span>1</span>שיחה קצרה</h3><p>תאריך, מספר אורחים, מה אוהבים ומה לא. ככה מתחילים.</p></div>
+          <div class="rv"><h3><span>2</span>תפריט אישי</h3><p>אני בונה תפריט בשבילכם, ומשנים יחד עד שהוא מרגיש נכון.</p></div>
+          <div class="rv"><h3><span>3</span>הערב עצמו</h3><p>אני מבשל ומגיש. אתם יושבים עם האורחים ונהנים.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--linen" id="journal">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <h2 class="h2" data-split><span class="ln"><span>מאמרים.</span></span></h2>
+            <p class="lede rv">כל מה שכדאי לדעת לפני שמזמינים שף הביתה.</p>
+          </div>
+          <a class="link rv" href="journal.html">לכל המאמרים <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg></a>
+        </div>
+        <div class="cards">
+          <a class="card rv" href="article-private-chef-at-home.html">
+            <div class="pic"><img src="assets/img/a-chef-700.jpg" alt="ליאב מחזיק נתח טונה במטבח" loading="lazy" /></div>
+            <p class="card__meta">5 דקות קריאה</p>
+            <h3>שף פרטי בבית: איך זה עובד מהשיחה הראשונה ועד הקינוח</h3>
+            <p>מה קורה לפני, מה קורה ביום עצמו, ומה אתם צריכים להכין.</p>
+          </a>
+          <a class="card rv" href="article-chef-or-catering.html">
+            <div class="pic"><img src="assets/img/a-guests-700.jpg" alt="אורחים סביב שולחן עם מנות ולחמים" loading="lazy" /></div>
+            <p class="card__meta">4 דקות קריאה</p>
+            <h3>שף פרטי או קייטרינג? איך בוחרים לאירוע בבית</h3>
+            <p>ההבדלים האמיתיים, ומתי כל אחת מהאפשרויות מתאימה יותר.</p>
+          </a>
+          <a class="card rv" href="article-table-setting.html">
+            <div class="pic"><img src="assets/img/a-setting-700.jpg" alt="צלחת עם מפית תחרה וכוס ירוקה על שולחן ערוך" loading="lazy" /></div>
+            <p class="card__meta">4 דקות קריאה</p>
+            <h3>איך עורכים שולחן שמרגיש כמו מסעדה</h3>
+            <p>פרחים, נרות, מפיות וכוסות — פרטים קטנים שעושים ערב גדול.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="contact">
+      <div class="shell contact">
+        <div class="pic pic--rv pic--par"><img src="assets/img/k-table-900.jpg" srcset="assets/img/k-table-900.jpg 600w, assets/img/k-table-1800.jpg 1200w" sizes="(max-width:900px) 92vw, 40vw" alt="מבט על שולחן מלא מנות, לחמים וכוסות יין" loading="lazy" /></div>
+        <div>
+          <h2 class="h2" data-split><span class="ln"><span>בואו נקבע</span></span><span class="ln"><span><em>ערב.</em></span></span></h2>
+          <p class="lede rv">שלחו הודעה עם תאריך משוער ומספר אורחים, ונתחיל לבנות את התפריט.</p>
+          <div class="contact__btns rv">
+            <a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer" class="btn btn--light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+              הודעה באינסטגרם</a>
+            <a href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A2%D7%A8%D7%91" target="_blank" rel="noopener noreferrer" class="btn btn--line">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.16c-.24.68-1.42 1.32-1.96 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.51-3.92-4.65-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .39-.02.61.47.23.55.77 1.9.84 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg>
+              וואטסאפ</a>
+          </div>
+          <ul class="contact__list rv">
+            <li><span>אינסטגרם</span><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" dir="ltr">@liav_shimonov_</a></li>
+            <li><span>וואטסאפ</span><a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer" dir="ltr">054-208-8166</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="foot" role="contentinfo">
+  <footer class="foot">
     <div class="shell">
-      <div class="foot__grid">
-        <div>
-          <div class="foot__brand">ליאב שמעונוב</div>
-          <div class="foot__tag">שף פרטי · אשדוד</div>
-          <p>ארוחות שף פרטיות, אירועים, וילות אירוח וסדנאות דגים. תפריט מותאם אישית לכל שולחן.</p>
-          <div class="foot__soc" aria-label="עקבו אחריי">
-            <a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer" aria-label="אינסטגרם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-            <a href="https://www.threads.com/@liav_shimonov_" target="_blank" rel="noopener noreferrer" aria-label="Threads"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm3.7 12.6c-.7 1-2 1.6-3.6 1.6-2 0-3.7-1-4.2-2.5l1.5-.5c.3.7 1.1 1.3 2.7 1.3.9 0 1.6-.2 2-.6.4-.4.5-.9.5-1.3 0-.6-.3-1-.9-1.3-.4-.2-1.1-.4-2-.5V9.4c1.4.2 2.5.7 3 1.6.3.4.4.9.4 1.5 0 .8-.4 1.6-1 2.1Z"/></svg></a>
-            <a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer" aria-label="וואטסאפ"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.2 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.02A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.24.68-1.42 1.3-1.97 1.38-.5.08-1.14.11-1.84-.12-.42-.13-.97-.31-1.67-.62-2.94-1.27-4.86-4.23-5-4.42-.15-.2-1.2-1.59-1.2-3.03s.76-2.15 1.03-2.44c.27-.29.58-.37.78-.37l.56.01c.18.01.42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.38 1.47.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg></a>
-          </div>
+      <div class="foot__top">
+        <div class="foot__brand"><b>ליאב שמעונוב</b><p>שף פרטי. ארוחות פרטיות בבית ואירועים.</p></div>
+        <div class="foot__cols">
+          <div><h4>באתר</h4><a href="#gallery">הגלריה</a><a href="#atmosphere">אווירה</a><a href="#services">מה מזמינים</a><a href="journal.html">מאמרים</a></div>
+          <div><h4>יצירת קשר</h4><a href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer">אינסטגרם</a><a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer">וואטסאפ</a><a href="https://www.threads.com/@liav_shimonov_" target="_blank" rel="noopener noreferrer">Threads</a></div>
+          <div><h4>מידע</h4><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תנאי שימוש</a><a href="accessibility.html">הצהרת נגישות</a></div>
         </div>
-        <div><h5>ניווט</h5><ul><li><a href="#about">הסיפור</a></li><li><a href="#services">שירותים</a></li><li><a href="#gallery">מהמטבח</a></li><li><a href="#process">איך זה עובד</a></li><li><a href="#reviews">המלצות</a></li><li><a href="#faq">שאלות נפוצות</a></li></ul></div>
-        <div><h5>יצירת קשר</h5><ul><li><a href="tel:+972542088166">054-208-8166</a></li><li><a href="https://wa.me/972542088166" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li>אשדוד והדרום</li><li>מגיע לכל הארץ בתיאום</li></ul></div>
-        <div><h5>מידע</h5><ul><li><a href="privacy.html">מדיניות פרטיות</a></li><li><a href="terms.html">תנאי שימוש</a></li><li><a href="accessibility.html">הצהרת נגישות</a></li></ul></div>
       </div>
       <div class="foot__bottom">
-        <div>© <span data-year>2026</span> ליאב שמעונוב · כל הזכויות שמורות.</div>
-        <div><a href="privacy.html">פרטיות</a><a href="terms.html">תנאים</a><a href="accessibility.html">נגישות</a></div>
+        <div>© <span data-year>2026</span> ליאב שמעונוב · כל הזכויות שמורות</div>
+        <div>צילום: <a href="https://www.instagram.com/shirancohenshay_photography/" target="_blank" rel="noopener noreferrer">שירן כהן שי</a></div>
+        <div class="foot__credit">עוצב ע״י <a href="https://wa.me/972525372958" target="_blank" rel="noopener noreferrer">Orian Digital</a></div>
       </div>
-      <div class="foot__credit">עוצב ע״י <a href="https://wa.me/972525372958" target="_blank" rel="noopener noreferrer">Orian Digital</a></div>
     </div>
   </footer>
 
-  <!-- ===== MOBILE STICKY CTA (phone only) ===== -->
-  <a class="mobile-cta" data-mobile-cta href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%AA%D7%97%D7%99%D7%9C%20%D7%94%D7%96%D7%9E%D7%A0%D7%94" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.2 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.02A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.24.68-1.42 1.3-1.97 1.38-.5.08-1.14.11-1.84-.12-.42-.13-.97-.31-1.67-.62-2.94-1.27-4.86-4.23-5-4.42-.15-.2-1.2-1.59-1.2-3.03s.76-2.15 1.03-2.44c.27-.29.58-.37.78-.37l.56.01c.18.01.42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.38 1.47.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
-    <span>להתחיל הזמנה</span>
-  </a>
+  <a class="mcta" href="https://ig.me/m/liav_shimonov_" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+    להזמנת ערב</a>
 
-  <!-- ===== A11Y WIDGET ===== -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="תצוגת תמונה" aria-hidden="true">
+    <img class="lb__img" alt="" />
+    <button type="button" class="lb__btn lb__close" aria-label="סגירה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <button type="button" class="lb__btn lb__prev" aria-label="התמונה הקודמת"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <button type="button" class="lb__btn lb__next" aria-label="התמונה הבאה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <p class="lb__meta"><b data-lb-cap></b><span data-lb-n dir="ltr"></span></p>
+  </div>
+
+  <div class="cur" aria-hidden="true"></div>
+
   <button class="a11y-btn" aria-label="פתיחת אפשרויות נגישות" aria-expanded="false" aria-controls="a11y-panel">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="4.5" r="2.2" fill="currentColor" stroke="none"/><path d="M4 8h16M9.5 8v7l-1.5 5M14.5 8v7l1.5 5M8 13h8"/></svg>
   </button>
@@ -422,19 +314,11 @@
     <div class="a11y-row"><span>הדגשת קישורים</span><div class="a11y-ctrls"><button class="a11y-chip" data-key="links" data-val="off" aria-pressed="true">כבוי</button><button class="a11y-chip" data-key="links" data-val="highlight" aria-pressed="false">הדגש</button></div></div>
     <div class="a11y-row"><span>עצירת אנימציות</span><div class="a11y-ctrls"><button class="a11y-chip" data-key="motion" data-val="on" aria-pressed="true">פועל</button><button class="a11y-chip" data-key="motion" data-val="off" aria-pressed="false">עצור</button></div></div>
     <button class="a11y-reset">איפוס להגדרות ברירת מחדל</button>
-    <p style="margin-top:14px;font-size:12px;color:var(--ink-faint);line-height:1.6">נתקלתם בבעיה? נשמח לדעת — <a href="tel:+972542088166" style="color:var(--ember)">054-208-8166</a></p>
+    <p class="a11y-note">נתקלתם בבעיה? <a href="accessibility.html">להצהרת הנגישות</a></p>
   </div>
 
-  <script src="assets/vendor/gsap.min.js"></script>
-  <script src="assets/vendor/ScrollTrigger.min.js"></script>
-  <script src="assets/vendor/SplitText.min.js"></script>
-  <script src="assets/vendor/DrawSVGPlugin.min.js"></script>
   <script src="assets/vendor/lenis.min.js"></script>
-  <script src="assets/vendor/three.min.js"></script>
   <script src="assets/vendor/swiper-bundle.min.js"></script>
-  <script src="assets/app.js"></script>
-  <script src="assets/fx3d.js"></script>
-  <script src="assets/enhance.js"></script>
-  <script src="assets/makeover.js"></script>
+  <script src="assets/site.js?v=1"></script>
 </body>
 </html>

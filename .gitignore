@@ -19,3 +19,5 @@ node_modules/
 
 # Downloaded photo bundle (source only — the extracted images live under assets/real/)
 liav_photos.zip
+
+graphify-out/
