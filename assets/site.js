@@ -66,11 +66,30 @@
     setTimeout(function () { start(); setTimeout(finish, 300); }, 8000);
   }
 
+  /* where the page opens: a refresh always starts at the top, a link to a section lands there once,
+     and the back button returns to the last position */
+  var navType = (function () {
+    var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (n) return n.type;
+    return performance.navigation && performance.navigation.type === 1 ? 'reload' : 'navigate';
+  })();
+  var posKey = 'liav-y:' + location.pathname, touched = false;
+  ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(function (ev) { addEventListener(ev, function () { touched = true; }, { passive: true, once: true }); });
+  addEventListener('pagehide', function () { try { sessionStorage.setItem(posKey, String(Math.round(scrollY))); } catch (e) {} });
+  function jumpTo(y) {
+    if (lenis) lenis.scrollTo(y, { immediate: true, force: true });
+    else window.scrollTo(0, y);
+  }
   function revealHero() {
     var h = $('.hero');
     if (h) setTimeout(function () { h.classList.add('is-live'); }, 60);
-    var t = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
-    if (t) setTimeout(function () { lenis ? lenis.scrollTo(t, { immediate: true, force: true }) : t.scrollIntoView(); }, 80);
+    var t = navType !== 'reload' && location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+    if (location.hash) try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    if (t) { setTimeout(function () { lenis ? lenis.scrollTo(t, { immediate: true, force: true }) : t.scrollIntoView(); }, 80); return; }
+    var y = 0;
+    if (navType === 'back_forward') { try { y = parseInt(sessionStorage.getItem(posKey), 10) || 0; } catch (e) {} }
+    jumpTo(y);
+    if (document.readyState !== 'complete') addEventListener('load', function () { if (!touched) jumpTo(y); }, { once: true });
   }
 
   /* nav + drawer */
