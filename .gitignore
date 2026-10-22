@@ -21,3 +21,7 @@ node_modules/
 liav_photos.zip
 
 graphify-out/
+
+# SEO audit + local build sources
+_audit/
+_build/
