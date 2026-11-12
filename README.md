@@ -4,7 +4,6 @@
 
 ---
 
-## אבטחה
 
 - **CSP קפדני** מוגדר ב-`<meta>` של כל דף — `default-src 'self'`.
 - **אין inline handlers**, אין `eval()`, אין ספריות מ-CDN חיצוני.
