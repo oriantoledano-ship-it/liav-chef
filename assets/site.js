@@ -159,10 +159,22 @@
     if (reduce) return;
     var pars = $$('.pic--par').map(function (p) { return { el: p, img: $('img', p) }; });
     var heroImg = $('.hero__media img');
+    // article cover: the whole portrait photo slowly pans past while the reader scrolls by it
+    var cov = $('.art__cover[data-pan]'), covImg = cov && $('img', cov);
+    var covFy = cov ? (parseFloat(cov.getAttribute('data-pan')) || 0.5) : 0.5;
+    if (covImg) cov.classList.add('is-pan');
     var ticking = false;
     function update() {
       ticking = false;
       var vh = window.innerHeight, y = window.scrollY;
+      if (covImg) {
+        var cr = cov.getBoundingClientRect(), ex = covImg.offsetHeight - cr.height;
+        if (ex > 0 && cr.bottom > 0 && cr.top < vh) {
+          var p = Math.min(Math.max(y / (y + cr.bottom), 0), 1);
+          var from = Math.max(0, covFy - 0.22), to = Math.min(1, covFy + 0.22);
+          covImg.style.translate = '0 ' + (-(from + (to - from) * p) * ex).toFixed(1) + 'px';
+        }
+      }
       if (heroImg && y < vh * 1.2) heroImg.style.translate = '0 ' + (y * 0.22).toFixed(1) + 'px';
       pars.forEach(function (p) {
         var r = p.el.getBoundingClientRect();
