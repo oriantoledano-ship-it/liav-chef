@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'sha256-jzL/1/GTulrXmexS7t+xwD6/mcoLbttEH/AZRIOv8OY='; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' 'sha256-jzL/1/GTulrXmexS7t+xwD6/mcoLbttEH/AZRIOv8OY='; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>מדיניות פרטיות · ליאב שמעונוב שף פרטי</title>
   <meta name="description" content="מדיניות הפרטיות של אתר ליאב שמעונוב שף פרטי - איזה מידע נאסף, איך משתמשים בו והזכויות שלכם על פי דין." />
@@ -13,10 +13,9 @@
   <meta property="og:description" content="מדיניות הפרטיות של אתר ליאב שמעונוב שף פרטי - איזה מידע נאסף, איך משתמשים בו והזכויות שלכם על פי דין." />
   <meta name="theme-color" content="#14100d" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=4" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/assistant-hebrew-0.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/frank-ruhl-libre-hebrew-2.woff2" crossorigin />
+  <link rel="stylesheet" href="assets/site.css?v=5" />
   <script src="assets/boot.js?v=2"></script>
   <script type="speculationrules">{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
 </head>
@@ -124,7 +123,7 @@
   <footer class="foot">
     <div class="shell">
       <div class="foot__top">
-        <div class="foot__brand"><b>ליאב שמעונוב</b><p>שף פרטי. ארוחות פרטיות בבית ואירועים.</p></div>
+        <div class="foot__brand"><b>ליאב שמעונוב</b><p>שף פרטי. ארוחות פרטיות בבית ואירועים, בכל הארץ.</p></div>
         <div class="foot__cols">
           <div><h3>באתר</h3><a href="index.html">עמוד הבית</a><a href="index.html#gallery">הגלריה</a><a href="index.html#services">מה מזמינים</a><a href="journal.html">מאמרים</a></div>
           <div><h3>יצירת קשר</h3><a href="https://wa.me/972542088166?text=%D7%94%D7%99%D7%99%20%D7%9C%D7%99%D7%90%D7%91%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A2%D7%A8%D7%91" target="_blank" rel="noopener noreferrer">וואטסאפ</a><a href="https://www.instagram.com/liav_shimonov_/" target="_blank" rel="noopener noreferrer">אינסטגרם</a><a href="https://www.threads.com/@liav_shimonov_" target="_blank" rel="noopener noreferrer">Threads</a></div>
