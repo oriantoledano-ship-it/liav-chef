@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oriantoledano-ship-it.github.io/liav-chef/sitemap.xml
+Sitemap: https://liavshimonov.com/sitemap.xml
